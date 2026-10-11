@@ -9026,3 +9026,18 @@ $5.
 - **No gate changes.** There have been 0 placements in 4 days. The
   forecast stream is +0.0038 at n=1452 (w_opt 0.649), so the gates are
   correctly keeping an at-market estimator off the ledger.
+
+## 2026-10-11 18:35Z update: PMO Dem Senate Oct-9 WSV rows settled (FULL, RETRO-20261011-1832)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Dem Senate 64-66% Oct 9 (`8ab87e366ec4`, WSV) | 0.03/0.32 | No @0.76 | +0.21 | No | **+1.58** |
+| Dem Senate 60-62% Oct 9 (`88d1b2dd9235`, WSV) | 0.30/0.2165 | none (Yes ask 0.399, No ask 0.966) | <0 | Yes | 0.00 |
+
+Mechanical ledger (`core/counterfactual.py ledger`): WSV 75 rows, 65
+fillable, 34W/31L, -$47.96, dBrier -0.0045 (was 63 fillable, -$57.07 at
+10-10 18:15Z). OVV unchanged at 238 fillable, +$196.86. Tool totals, not
+hand re-sums. Ruling: no boundary change. The 16h-out PMO driftless model
+was right on both legs (dBrier strongly favorable), but the books were
+$100 deep with 0.16-0.37 spreads; the one fillable leg would have made
+$1.58. The PMO family's lesson is model quality, not a veto cost.
