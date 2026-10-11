@@ -241,5 +241,7 @@ PY
   PHIL_PUSH_BY_LOOP=1 python3 core/lease.py release >/dev/null \
     || echo "WARNING: could not release the runner lease - it expires on its own" >&2
 
-  [ "$i" -lt "$CYCLES" ] && sleep $((SLEEP_MIN * 60))
+  # if, not &&: as the last command, a false test made every complete run
+  # exit 1, so the pi4 timer would show each successful tick as failed.
+  if [ "$i" -lt "$CYCLES" ]; then sleep $((SLEEP_MIN * 60)); fi
 done
