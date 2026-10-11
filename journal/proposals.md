@@ -4165,3 +4165,17 @@ There are no new hourly proposals since DEEP-10-10.
   the mechanical OVV fork read today. Please add a `--skip-reason`
   fast path, or cache `evts`. Status: PROPOSED.
 - **P3(a), P1 and P2: unchanged (PROPOSED).** The playbook is 571KB.
+
+## 2026-10-11 16:5xZ (FULL, pi4): pi4 runner lacks the odds key and sandbox approvals for repo tools
+
+- **(new, medium) odds.py key missing on pi4:** `core/odds.py odds basketball_nba`
+  exited with "no ODDS_API_KEY in env and no ~/.config/phil/odds-api-key"
+  (Thunder-Hawks, 5352832, logged benchmark-unreachable). Every sports
+  candidate on a pi4 FULL loses its only sanctioned benchmark. Ask: provision
+  `~/.config/phil/odds-api-key` on pi4, or route sports research to cloud ticks.
+- **(new, medium) pi4 sandbox blocks repo tools:** this session needed approval for
+  `strategy/tools/reconcile.py`, `strategy/tools/siblings.py`, `strategy/tools/quote.py`
+  and curl. So the playbook funnel weld (reconcile output in cycles.log) cannot
+  be satisfied on pi4, and the open-position monitor falls back to score.py
+  marks. Ask: allow `python3 strategy/tools/*.py` in the pi4 runner's permission set.
+  Status: PROPOSED.
