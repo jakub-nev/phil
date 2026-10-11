@@ -153,7 +153,12 @@ PY
   # step 9 and its rebase path mandate exactly these commands, and a
   # permission-blocked "checkout -B" strands the cycle's commits on a
   # detached HEAD (2026-08-28).
-  CMD=(claude -p "$PROMPT" --model "$MODEL"
+  # pi4 runner (operator, 2026-10-11): passed as the -p message, the 23 KB
+  # procedure reads to Claude Code 2.1.296 as context, not a request -- Sonnet
+  # answered "I don't see a specific request" on two ticks in a row. The
+  # procedure goes in the system prompt and the message is the instruction.
+  CMD=(claude -p "Run the trading cycle procedure in your system prompt now, exactly once."
+       --append-system-prompt "$PROMPT" --model "$MODEL"
        --allowedTools "Read" "Glob" "Grep" "WebSearch" "WebFetch"
          "Edit" "Write" "Task"
          "Bash(python3 core/*)" "Bash(git add:*)" "Bash(git commit:*)"
@@ -177,11 +182,9 @@ PY
           --disallowedTools "Read($STORE/.mcp.json)")
   fi
   CMD+=(--permission-mode acceptEdits)
-  # pi4 runner (operator, 2026-10-11): this machine logs in with a claude.ai
-  # account whose skills (16.7 KB listing) and connectors are attached after
-  # CYCLE.md; on the first tick Sonnet read the whole prompt as context and
-  # did nothing. The cycle uses neither. --strict-mcp-config still loads the
-  # Pearl Connect --mcp-config above when it is up.
+  # pi4 runner (operator, 2026-10-11): the claude.ai login attaches its skill
+  # listing (16.7 KB) and connectors to every cycle; the cycle uses neither.
+  # --strict-mcp-config still loads the Pearl Connect --mcp-config when up.
   CMD+=(--disable-slash-commands --strict-mcp-config)
 
   # PHIL_PUSH_BY_LOOP tells CYCLE.md step 9 to commit but not push — the push
