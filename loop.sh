@@ -177,6 +177,12 @@ PY
           --disallowedTools "Read($STORE/.mcp.json)")
   fi
   CMD+=(--permission-mode acceptEdits)
+  # pi4 runner (operator, 2026-10-11): this machine logs in with a claude.ai
+  # account whose skills (16.7 KB listing) and connectors are attached after
+  # CYCLE.md; on the first tick Sonnet read the whole prompt as context and
+  # did nothing. The cycle uses neither. --strict-mcp-config still loads the
+  # Pearl Connect --mcp-config above when it is up.
+  CMD+=(--disable-slash-commands --strict-mcp-config)
 
   # PHIL_PUSH_BY_LOOP tells CYCLE.md step 9 to commit but not push — the push
   # happens below, in this shell. GIT_TERMINAL_PROMPT/GIT_ASKPASS make any
