@@ -157,11 +157,15 @@ PY
   # procedure reads to Claude Code 2.1.296 as context, not a request -- Sonnet
   # answered "I don't see a specific request" on two ticks in a row. The
   # procedure goes in the system prompt and the message is the instruction.
+  # pi4 runner (operator, 2026-10-11): strategy/tools/*.py were not allowlisted,
+  # so reconcile.py and the live price check were blocked and the 16:36Z
+  # cycle logged "reconcile: NOT RUN" where CYCLE.md requires its output.
   CMD=(claude -p "Run the trading cycle procedure in your system prompt now, exactly once."
        --append-system-prompt "$PROMPT" --model "$MODEL"
        --allowedTools "Read" "Glob" "Grep" "WebSearch" "WebFetch"
          "Edit" "Write" "Task"
          "Bash(python3 core/*)" "Bash(git add:*)" "Bash(git commit:*)"
+         "Bash(python3 strategy/tools/*)"
          "Bash(git rev-parse:*)" "Bash(git log:*)" "Bash(git diff:*)"
          "Bash(git status:*)" "Bash(git symbolic-ref:*)"
          "Bash(git merge-base:*)" "Bash(git rev-list:*)"
