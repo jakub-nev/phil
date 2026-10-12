@@ -9092,3 +9092,17 @@ wide-spread-veto`): WSV 76 rows, 66 fillable, 35W/31L, -$47.49, dBrier
 -0.0047 (was 65 fillable, -$47.96). Tool totals, not hand re-sums. The tool
 fills on the mid side, but at record time neither ask cleared my estimate,
 so no real gate would have placed it. Ruling: no boundary change.
+
+## 2026-10-12 20:00Z update: Musk Oct10-12 40-64 OVV row backfilled (FULL, RETRO-20261012-2005)
+
+This row settled on the 19:18Z LIGHT tick, and RETRO-20261012-1901 graded it
+narratively but left it out of the table. `reconcile.py` flagged it this tick.
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Musk Oct10-12 40-64 (`1c66d0d76610`, OVV, revised-away) | 0.55/0.67 | No | +0.11 | Yes | -5.00 |
+
+Mechanical ledger (`core/counterfactual.py ledger`): OVV 248 rows, 240
+fillable, 103W/137L, +$199.68, dBrier +0.0238. These are the tool's totals,
+not hand re-sums. Ruling: no boundary change. The veto saved $5, and this row
+fits the existing rule that small-n postcount reads shrink toward the book.
