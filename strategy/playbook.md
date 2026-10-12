@@ -9041,3 +9041,19 @@ hand re-sums. Ruling: no boundary change. The 16h-out PMO driftless model
 was right on both legs (dBrier strongly favorable), but the books were
 $100 deep with 0.16-0.37 spreads; the one fillable leg would have made
 $1.58. The PMO family's lesson is model quality, not a veto cost.
+
+## 2026-10-12 12:00Z update: Kyiv Oct-12 daily-target forecasts settled Yes (FULL, RETRO-20261012-1200)
+
+Re-grade pre-registered at 2026-10-09 20:15Z. Three forecast rows (no bet,
+no veto row) on 5167148, resolved Yes:
+
+| Row | own/mkt | dBrier |
+|---|---|---|
+| `af505e60c020` (9d out, talks-risk shade) | 0.88/0.915 | +0.0072 |
+| `4e1fe00a7371` / `bf588ea82108` (MoD escalation pledge) | 0.93/0.875 | -0.0107 each |
+
+Ruling: the absence-shade cap (<=0.05 below base rate) is confirmed at n=2
+families; the extra lesson is symmetric — distant "talks risk" shading
+below a 20-of-20 trailing base rate also cost Brier. Anchor daily Kyiv
+rows on the trailing base rate; move off it only on a concrete, dated
+event (escalation pledge, announced ceasefire), not on generic talk risk.
