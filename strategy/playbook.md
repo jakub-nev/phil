@@ -4512,6 +4512,20 @@ listed source gives, not the lowest of the Fri-night projections. When
 Fri incl previews is >= 40%, the Fri-night weekend projection ran ~20%
 high (10M vs 8M). Post-rule rows 5 (3 events), net dBrier -0.39.
 Box-office n=33, mean dBrier -0.0021. Still no-bet.
+Tally (RETRO-20261012-2205, LIGHT tick settlement): Other Mommy OW
+24-27m/27-30m (`f587533db89c`/`d60414387526`) and Verity wk2 11-12m/
+12-13m/13-14m (`bdf1854278a7`/`313457179cc4`/`be436d82c541`) all settled;
+net dBrier -0.69 (4 of 5 rows worse than market). Both events: the book's
+own bracket pick (Other Mommy 27-30m @0.73, Verity 12-13m @0.56) was the
+actual outcome, held with more confidence than the press-centre Gaussian
+assigned it (0.47, 0.30) — the rule's cross-bracket flattening cost
+calibration on a tight, one-sided book both times. Post-rule rows now 10
+(5 events), net dBrier -1.08. This is the 6th post-rule event the
+2026-10-05 tally flagged for review: next box-office event, decide
+whether to keep press-shading when the book is tight (spread <= 0.06ish)
+and concentrated on one bracket, or just defer to the book's pick in that
+case — do not add a 7th event of data first. Still no-bet (forecast-only,
+no P&L cost from this batch).
 
 **2026-09-22 ~18:15Z update (FULL cycle, cloud; resolve.py settled 14
 forecasts, 2 `outside-view-veto`).** Both rows are the Trump x Greenland
