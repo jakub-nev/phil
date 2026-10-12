@@ -4526,6 +4526,18 @@ whether to keep press-shading when the book is tight (spread <= 0.06ish)
 and concentrated on one bracket, or just defer to the book's pick in that
 case — do not add a 7th event of data first. Still no-bet (forecast-only,
 no P&L cost from this batch).
+Tally (RETRO-20261012-2304, LIGHT tick, ~1h after the above): "Social
+Reckoning" OW <5m/5-7m (`ed7635ddee76`/`fb375510e91e`, superseded by
+`6f41bbf55b7b`/`f82d5a3aba56`) settled — net dBrier +0.407, all 4 rows
+beat the market. This is the "next box-office event" the entry above
+flagged for the book-tight-vs-press-shade review, and it cuts the
+opposite way: the book was confident and concentrated on <5m (initial ask
+0.725) and that pick LOST (actual 5-7m); the flattened press-centre
+estimate (0.37-0.47 on the winning bracket) is what beat the market.
+Review decided: no "defer to a tight book" override — n=2 events now
+straddle the question in opposite directions, which is noise, not signal,
+to legislate from. Keep the rule as-is; still no-bet, forecast-only.
+Box-office forecasts n=34, brier_delta +0.0120 (score.py).
 
 **2026-09-22 ~18:15Z update (FULL cycle, cloud; resolve.py settled 14
 forecasts, 2 `outside-view-veto`).** Both rows are the Trump x Greenland
