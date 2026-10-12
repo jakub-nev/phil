@@ -9077,3 +9077,18 @@ check owns it. The own count model was right against a confident book.
   adjacent buckets), the estimate on either of those buckets is capped at
   0.55. The note flagged it, and the estimate ignored the flag anyway.
   n=1; re-grade on the next election-count family.
+
+## 2026-10-12 16:00Z update: USGS exactly-2 M6.5+ WSV row backfilled (FULL, RETRO-20261012-1600)
+
+The row settled on the 15:00Z LIGHT tick and RETRO-20261012-1500 graded it
+narratively but missed the table. `reconcile.py` flagged it this tick.
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| USGS exactly 2 M6.5+ Oct5-12 (`5aa5b2a1b2ea`, WSV) | 0.88/0.8195 | Yes @0.915 (tool fill) | -0.035 vs ask | Yes | **+0.47** |
+
+Mechanical ledger (`core/counterfactual.py ledger --skip-reason
+wide-spread-veto`): WSV 76 rows, 66 fillable, 35W/31L, -$47.49, dBrier
+-0.0047 (was 65 fillable, -$47.96). Tool totals, not hand re-sums. The tool
+fills on the mid side, but at record time neither ask cleared my estimate,
+so no real gate would have placed it. Ruling: no boundary change.
