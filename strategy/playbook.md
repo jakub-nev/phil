@@ -9057,3 +9057,23 @@ families; the extra lesson is symmetric — distant "talks risk" shading
 below a 20-of-20 trailing base rate also cost Brier. Anchor daily Kyiv
 rows on the trailing base rate; move off it only on a concrete, dated
 event (escalation pledge, announced ceasefire), not on generic talk risk.
+
+## 2026-10-12 14:00Z update: Berlin seat ladder settled; OVV row ccc9f72c326e (FULL, RETRO-20261012-1400)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Berlin house >=163 (`ccc9f72c326e`, OVV, 98.4% count) | 0.25/0.775 | No @0.39 | +0.36 | No | **+7.82** |
+
+Mechanical ledger (`core/counterfactual.py ledger --skip-reason
+outside-view-veto`): OVV 247 rows, 239 fillable, 103W/136L, +$204.68,
+dBrier +0.0236 (was 238 fillable, +$196.86). These are tool totals, not
+hand re-sums. Ruling: no boundary change at n=1 event; the DEEP OVV fork
+check owns it. The own count model was right against a confident book.
+
+- **Self-flagged knife-edge caps the bucket estimate (RETRO-20261012-1400,
+  `b3b518386948` CDU 35-39, 0.62 vs mid 0.445, settled No, dBrier
+  +0.186).** When my own seat or count model's note flags a knife-edge
+  (one apportionment remainder or count unit decides between two
+  adjacent buckets), the estimate on either of those buckets is capped at
+  0.55. The note flagged it, and the estimate ignored the flag anyway.
+  n=1; re-grade on the next election-count family.
