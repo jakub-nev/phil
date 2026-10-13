@@ -51,6 +51,13 @@ def main(argv):
               f" vol24={m.get('volume24hr')}")
         print(f"   outcomes {outs} prices {prices} "
               f"bid/ask {m.get('bestBid')}/{m.get('bestAsk')}")
+        toks = m.get("clobTokenIds")
+        try:
+            toks = json.loads(toks) if isinstance(toks, str) else toks
+        except ValueError:
+            pass
+        # token ids feed strategy/tools/quote.py (added 2026-10-13 09:2xZ)
+        print(f"   tokens {dict(zip(outs or [], toks or []))}")
         ev = (m.get("events") or [{}])[0]
         print(f"   event {ev.get('id')} {ev.get('title')}")
         desc = (m.get("description") or "").replace("\n", " ")
