@@ -8721,6 +8721,17 @@ one riding projection stays barred.
   regime-weighted rows do not beat the 365d-only figure in summed dBrier,
   the recent-regime weight is capped at 0.5 for bets. Until then the bet
   side is unchanged.
+  **Week 1 of 3 (Oct5-11, RETRO-20261013-0902):** final count 12, bet
+  38f9c08d4804 LOST -$5. The regime-weighted '<=6' rows summed dBrier
+  -0.356, and the 365d-only components of those same rows summed +0.229.
+  365d wins week 1, and it counts as ONE observation. **Interim bet guard
+  until the 3-week check:** a USGS weekly-count BET must clear min_edge
+  on the 365d-rate component alone. The regime weight may move the
+  recorded forecast, but it cannot create bet edge. Also seen this week:
+  in-progress rows overweighted the M7.7 aftershock tail ('>13' 0.53,
+  late '12' P0 below the book twice; sum -0.13). Shade aftershock lambda
+  toward the book's implied rate unless USGS shows aftershocks still
+  arriving at >=5.5 within the last 12h.
 - **Validated-feed bets 0/3 since 09-30** (9a2944acc280, d5cfa982fa21,
   9b7c41da79ac; -$15). Each loss has its own named cause, and both are
   now covered by a rule: two mb->mww downgrades took the USGS '7' count
