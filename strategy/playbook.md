@@ -9132,3 +9132,21 @@ Mechanical ledger (`core/counterfactual.py ledger`): OVV 248 rows, 240
 fillable, 103W/137L, +$199.68, dBrier +0.0238. These are the tool's totals,
 not hand re-sums. Ruling: no boundary change. The veto saved $5, and this row
 fits the existing rule that small-n postcount reads shrink toward the book.
+
+## 2026-10-13 01:00Z backfill: Oct 11 Atlanta/Miami rain WSV rows (FULL, pi4)
+
+Settled on the 2026-10-12 20:01Z FULL, but RETRO-20261012-2005 left them
+out of this table. `reconcile.py` has flagged them on every tick since.
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Atlanta rain Oct 11 (`31f0b027cb41`, WSV) | 0.15/0.56 | none (No ask 0.879 > own 0.85) | <0 | Yes | 0.00 |
+| Miami rain Oct 11 (`c033b00fafa2`, WSV) | 0.99/- | none (no ask) | - | Yes | 0.00 |
+| Atlanta rain Oct 11 (`98d826749d43`, WSV, supersedes 31f0) | 0.97/0.75 | none (Yes ask 0.999) | -0.029 | Yes | 0.00 |
+
+Mechanical ledger (`core/counterfactual.py ledger --skip-reason
+wide-spread-veto`): WSV 79 rows, 67 fillable, 35W/32L, -$52.49, dBrier
+-0.0110. These are tool totals. All three rows were refused fills on
+placeholder books (bid 0.01-0.50, ask 0.999), so they have no veto cost. The
+0.15 Atlanta read was wrong, and the superseding 0.97 fixed it. Ruling: no
+boundary change.
