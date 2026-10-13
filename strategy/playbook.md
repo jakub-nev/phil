@@ -1567,6 +1567,15 @@ brier_delta +0.0838 on n=35. A primary-source check (news page, models page)
 still runs, but only a POSITIVE finding (the launch is live, or an official
 date) moves est_prob off the mid. "Not out yet" earlier on the day moves
 nothing. Re-grade the shade views at n=8.
+RETRO-20261013-1900: the rule binds on EVERY skip label, veto labels
+included. Argon Oct13 `edefab8852ce` was recorded as wide-spread-veto at
+own 0.55 vs mid 0.71 ("Fairwind-only, no date"), resolved Yes, dBrier
++0.119. Two hours later, the sibling `97b3dd462af2` kept the same lean as a
+shade view and lost nothing. Gemini 4/Argon is the third launch event where
+every later-than-market lean lost (about 8 distinct markets). The n=8
+re-grade is met: rule KEPT. A cross-market floor from a sibling's live BID
+(`4323ab76d42b`, G4 Oct13 >= Argon Oct13 bid 0.89) is a positive finding
+and may move est_prob off the mid.
 
 **Treasury touch drift rule (RETRO-20260928-2215).** For a Treasury
 par-yield touch rung ("hit X% in <month>") with 5 or fewer prints left,
