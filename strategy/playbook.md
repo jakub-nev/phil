@@ -5575,6 +5575,18 @@ gate-1-compatible adjustment; substituting a recalled-from-memory SD for
 the market's implied one is not, and should not be treated as
 "benchmarked" just because the mean half of the same model is sourced.
 
+**September CPI cluster (RETRO-20261014-1500): centre on consensus, not
+the nowcast.** 26 forecast-only rows settled at sum dBrier -0.17 vs the
+mid. Print: headline MoM 0.6 / YoY 3.7, core MoM 0.3. Cleveland nowcast
+said 0.53 / 3.60 / core 0.20; LSEG consensus said 0.6 / 3.7. Core MoM
+nowcast 0.20 has now printed 0.3 two months running (Aug, Sep). Rule: on
+CPI bracket ladders, when a quoted numeric consensus exists and differs
+from the Cleveland nowcast, the own mean is the consensus (nowcast only
+nudges within the consensus bucket); a nowcast-only centre is labelled
+`unvalidated-method`. Since the ladder already prices the consensus, expect
+`market-agrees` on most legs — that is the honest outcome, not a reason to
+search for a different centre.
+
 **2026-08-21 update (18:11Z settlement): the Aug14-21 Musk weekly set's
 two >0.10-disagreement legs both settled, both LOST.** 240-259
 (cd3af116ed2a, No side, bid 0.252 vs est 0.16) lost to the actual count
