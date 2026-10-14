@@ -9214,3 +9214,11 @@ Brier of the market on each side, no new rule implied — ordinary
 calibration noise on an occasion with no edge anywhere. America First
 (`d24b7ad7cb98`, unvalidated-method) is the only one of the 10 still open;
 the watch item carries it to settlement.
+
+**Closure (2026-10-14 06:0xZ, LIGHT tick, RETRO-20261014-0604):**
+`d24b7ad7cb98` settled LOST (own 0.45 vs mkt 0.40, actual No, market beat
+own by 0.0425 Brier) — the unvalidated-method gate's no-sourced-base-rate
+refusal would have cost real money here too. Family now 10/10 settled,
+**zero bets placed across the whole occasion** (every leg stayed behind
+either OVV, unvalidated-method, or no-edge), net P&L $0.00. No boundary
+change; watch item archived to `strategy/watch-archive.jsonl`.
