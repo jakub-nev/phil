@@ -9170,3 +9170,47 @@ wide-spread-veto`): WSV 79 rows, 67 fillable, 35W/32L, -$52.49, dBrier
 placeholder books (bid 0.01-0.50, ask 0.999), so they have no veto cost. The
 0.15 Atlanta read was wrong, and the superseding 0.97 fixed it. Ruling: no
 boundary change.
+
+## 2026-10-14 04:0xZ update: Wasilla AK rally word family settled 9/10, two OVV rows graded (LIGHT tick, RETRO-20261014-0400)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Trump AK "SI/Super Intelligence" 3+ (`4aa2739b5cc8`, OVV) | 0.50/0.24 | Yes | +0.250 | No | -5.00 |
+| Trump AK "Iran" 5+ (`05bc34716ff6`, OVV) | 0.45/0.58 | No | +0.120 | Yes | -5.00 |
+
+Mechanical ledger (`core/counterfactual.py ledger --skip-reason
+outside-view-veto`): OVV 251 rows, 243 fillable, 103W/140L, +$184.68,
+dBrier +0.0252 (was 241 rows, +$184.90 at DEEP-2026-10-08). Tool totals.
+
+Ruling: no boundary change. This closes the family's pre-registered Test 1
+(schedule.json watch item, recorded 2026-10-13 21:0xZ): "did the Factbase
+first-half transcript count beat the thin mention books on SI 3+ and Iran
+5+?" Answer: no, on both. SI 3+ own 0.50 vs market 0.24 — the partial
+(first ~40 of ~90 min) transcripts showed 3/4 prior rallies hitting 3+
+already in the visible half, but two of those sat exactly at 3 (one fewer
+utterance flips them), and the full-speech outcome was <3; own Brier 0.25
+vs market's 0.0576, market beat us by 0.19. Iran 5+ own 0.45 vs market
+0.58 — topical upside (Iran war, Houthi strike on Riyadh) pulled the
+estimate down from the book, but the mention count did clear 5; own Brier
+0.3025 vs market's 0.1764, market beat us by 0.13. Both rows were
+already behind min_edge-after-OVV (forecast-only, no bet), so the veto
+cost nothing and saved $10 of counterfactual loss — the gate worked. The
+lesson is about the METHOD, not the gate: truncated (~40min) same-event
+transcripts are too thin to extrapolate a full-speech count with the
+confidence this family assigned (edge >0.10 on both), and the thin mention
+book was, if anything, the better-informed side here. No playbook edit
+to the OVV boundary; this is further evidence the existing veto threshold
+is calibrated correctly, not a case for loosening it.
+
+Test 2 (venue-local words rule, DEEP-2026-10-08, "re-grade at n=5"): Oil/Gas
+15+ (`35d4184111ce`, market-agrees, recorded at the mid per the rule, no
+transcript-rate override) settled WON at mid 0.705. Venue-local tally is
+now **5/5** (Egg, Toyota, Gulf of America, Alamo, Oil/Gas 15+ AK). KEEP,
+unchanged; still a recording floor, never a bet trigger.
+
+Remaining 7 family rows (Ceasefire, Fish, Russia/Ukraine, AI, Hell 15+,
+Save America Act all market-agrees/no-edge, no bet) settled within 0.02-0.19
+Brier of the market on each side, no new rule implied — ordinary
+calibration noise on an occasion with no edge anywhere. America First
+(`d24b7ad7cb98`, unvalidated-method) is the only one of the 10 still open;
+the watch item carries it to settlement.
