@@ -1610,6 +1610,18 @@ Prefer, in order:
      found" as benchmark-unreachable by default for GAAP-threshold beat
      markets, the same as a basis mismatch — don't fall back to the
      non-GAAP consensus as a stand-in.
+   - **Price far below base rate = search for the one-off first
+     (RETRO-20261014-1300, BAC `5410784`).** When a beat market's mid sits
+     ≥0.25 below the ~0.75-0.85 large-cap base rate while consensus
+     clears the threshold, the default reading is that the market knows
+     about a GAAP charge, penalty, settlement or pre-announcement — not
+     that it is asleep. Before forming the estimate, run a dated news
+     search on "<company> charge / penalty / settlement / 8-K" for the
+     prior 7 days and quote what it finds. BAC was recorded at 0.70 vs a
+     0.325 mid on 07:06Z Oct 14 off adjusted-style consensus 1.11-1.19;
+     a $1.2B Treasury penalty announced Oct 13 put GAAP EPS at 0.91 < 1.16.
+     If the search finds nothing, the estimate still stays within 0.15 of
+     the mid — a fat gap against base rate is evidence, not edge.
    - **"Consensus clears the threshold" is not an edge when PM already
      prices it ≥~0.80** (CRCL 0.845, OXY 0.91): the market has the same
      consensus. The tradeable shapes are (i) PM price *contradicting* the
