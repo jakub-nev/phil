@@ -1,7 +1,8 @@
 """Same-season check for Parcl Dec 31 legs: relative change from ~Oct 1 to
 Dec 31 in each past year, per parcl id on argv (playbook 2026-10-03).
 
-Usage: python3 strategy/tools/parcl_season.py <parcl_id> [<parcl_id> ...]
+Usage: python3 strategy/tools/parcl_season.py [--tail=N] [--horizon=D] <parcl_id> [...]
+  --tail=N prints the last N daily points; --horizon=D adds the worst D-day move.
 """
 import datetime as dt
 import json
@@ -17,7 +18,17 @@ def history(pid):
     return json.load(urllib.request.urlopen(req, timeout=30))
 
 
-for pid in [int(a) for a in sys.argv[1:]]:
+TAIL = HORIZON = 0
+args = []
+for a in sys.argv[1:]:
+    if a.startswith("--tail="):
+        TAIL = int(a.split("=")[1])
+    elif a.startswith("--horizon="):
+        HORIZON = int(a.split("=")[1])
+    else:
+        args.append(a)
+
+for pid in [int(a) for a in args]:
     rows = history(pid)["series"][str(pid)]["data"]
     pts = {}
     for r in rows:
@@ -32,3 +43,12 @@ for pid in [int(a) for a in sys.argv[1:]]:
         b = [d for d in days if dt.date(y, 12, 29) <= d <= dt.date(y + 1, 1, 2)]
         if a and b:
             print("  ", y, a[0], b[-1], "%+.2f%%" % (100 * (pts[b[-1]] / pts[a[0]] - 1)))
+    if TAIL:
+        # daily slide pace (2026-10-14: NYC fell -7.1% in 15 days; the
+        # same-season table alone cannot say whether the pace is easing)
+        for d in days[-TAIL:]:
+            print("   %s %.2f" % (d, pts[d]))
+        if HORIZON:
+            worst = min(pts[d2] / pts[d] - 1 for d in days for d2 in
+                        [d + dt.timedelta(days=HORIZON)] if d2 in pts)
+            print("   worst %dd move since 2020: %+.2f%%" % (HORIZON, 100 * worst))
