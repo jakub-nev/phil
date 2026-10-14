@@ -9222,3 +9222,18 @@ refusal would have cost real money here too. Family now 10/10 settled,
 **zero bets placed across the whole occasion** (every leg stayed behind
 either OVV, unvalidated-method, or no-edge), net P&L $0.00. No boundary
 change; watch item archived to `strategy/watch-archive.jsonl`.
+
+## 2026-10-14 07:00Z backfill: China Sep CPI 0.9-1.0 OVV row (FULL, pi4)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| China Sep CPI 0.9-1.0 (`fc10ca9ae3bb`, OVV, superseded) | 0.50/0.62 | No | +0.110 | Yes | -5.00 |
+
+reconcile.py flagged it: RETRO-20261014-0400 graded this row as a plain
+no-edge ladder leg, but it was recorded as outside-view-veto, so it owes
+a table row under the DEEP-2026-08-23 rule. The mechanical ledger already
+counts it (`core/counterfactual.py ledger --skip-reason outside-view-veto
+--rows`: "no edge +0.110 pnl -5.00"), and totals stand at 251 rows,
+103W/140L, +$184.68. The veto saved $5. No boundary change. Process note:
+when a settling retro grades a superseded row, check that row's own
+skip_reason, not the live row's.
