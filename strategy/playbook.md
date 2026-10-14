@@ -8381,6 +8381,12 @@ read. The 90-day legs stay forecast-only (`unvalidated-method`).
   The family's first settlement is in, so the $10 first-contact cap
   lapses; the normal $10 per-event cap still applies.
   The operator runner graded the same settlement in RETRO-20261006-1535.
+  **feed-days-gate counterfactual slice** (RETRO-20261014-1600, keep
+  appending): Oct5-11 190-209 706ab3d9b265 est 0.50 vs ask 0.42, gated at
+  0 published days, resolved Yes -> gate cost ~+$6.90 on $5. Tally: 1
+  gated, 1 would-have-won. Weekly-sum model centre has now picked the
+  winning bracket 2/2 (Sep28 wk, Oct5 wk). Do not loosen on n=1; the next
+  deep retro reviews the gate once the slice has >= 4 rows.
 - **Pacing fix confirmed.** The +1h45m target (DEEP-2026-10-02) took the
   window from 4 FULLs to 12. Every FULL committed a funnel row
   (06:22Z backfilled, 08:13Z through 04:11Z). Keep.
