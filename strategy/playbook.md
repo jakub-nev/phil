@@ -9300,3 +9300,19 @@ PRECIPITATION line prints, then use the CLI.** Phoenix (CLI-read 0.02)
 won as recorded, the same CLI-first method that the Atlanta supersede
 showed on 10-12.
 Evidence n=1 (this row). Re-grade the floor once 5 rain rows have hit it.
+
+## 2026-10-15 08:0xZ backfill: Fable 5.2+ by Oct 14 WSV row (FULL, pi4)
+
+The row settled on the 07:0xZ LIGHT tick. RETRO-20261015-0700 graded it
+narratively but did not add it to this table, and `reconcile.py` flagged it
+this tick.
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Next Fable model 5.2+ by Oct 14 (`9ca6eb2853d0`, WSV) | 0.18/0.325 | No | +0.130 | No | **+2.25** |
+
+Mechanical ledger (`core/counterfactual.py ledger --skip-reason
+wide-spread-veto`): WSV 84 rows, 70 fillable, 36W/34L, -$60.25, dBrier
+-0.0110 (was 83 rows, 69 fillable, -$62.49). These are tool totals. The veto
+cost $2.25 here. The estimate was right, and the spread rule worked as
+designed. No boundary change.
