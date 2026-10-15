@@ -9335,3 +9335,19 @@ wide-spread-veto`): WSV 84 rows, 70 fillable, 36W/34L, -$60.25, dBrier
 -0.0110 (was 83 rows, 69 fillable, -$62.49). These are tool totals. The veto
 cost $2.25 here. The estimate was right, and the spread rule worked as
 designed. No boundary change.
+
+## 2026-10-15 21:0xZ update: Dallas rain Oct 14 WSV row (LIGHT tick, pi4)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Dallas rain Oct 14 (`07a0ace5e58a`, WSV) | 0.05/0.10 | No | +0.050 | Yes | **+0.56** |
+
+Mechanical ledger (`core/counterfactual.py ledger --skip-reason
+wide-spread-veto`): WSV 85 rows, 71 fillable, 37W/34L, -$59.69, dBrier
+-0.0110 (was 84 rows, 70 fillable, 36W/34L, -$60.25). The veto cost $0.56
+here. KDFW CLI showed zero precipitation through the climate day with ~6h
+left and isolated-convection residual only; the No side was correctly
+favored at 0.95 but the book (No ask 0.90, no No bid) failed max_spread.
+Second graded instance of the 2026-10-15 00:0xZ rain-yes CLI-first floor
+rule, on the opposite (No) side from the Seattle/Phoenix pair — consistent
+with that rule, no boundary change.
