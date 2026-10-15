@@ -9267,3 +9267,30 @@ counts it (`core/counterfactual.py ledger --skip-reason outside-view-veto
 103W/140L, +$184.68. The veto saved $5. No boundary change. Process note:
 when a settling retro grades a superseded row, check that row's own
 skip_reason, not the live row's.
+
+## 2026-10-15 00:0xZ update: Oct 13 Seattle/Phoenix rain WSV rows, PGR CR OVV row, BAC beat WSV backfill (FULL, pi4, RETRO-20261015-0000)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| Seattle rain Oct 13 (`d7a6d32875c7`, WSV) | 0.10/0.50 | none (No ask 0.999 > own 0.90) | -0.099 | Yes | 0.00 |
+| Phoenix rain Oct 13 (`af6002eacb4c`, WSV) | 0.97/0.50 | none (Yes ask 0.999) | -0.029 | Yes | 0.00 |
+| PGR Q3 CR 86-89 (`682dd2c689ac`, OVV) | 0.58/0.725 | No | +0.140 | Yes | -5.00 |
+| BAC beat Q3 GAAP EPS (`108c66c9d4fe`, WSV, backfill) | 0.70/0.325 | Yes | +0.260 | No | -5.00 |
+
+Mechanical ledger tool totals: WSV 83 rows, 69 fillable, 35W/34L,
+-$62.49, dBrier -0.0103; OVV 252 rows, 244 fillable, 103W/141L, +$179.68,
+dBrier +0.0255. Both fillable rows lost on the model's side, so the vetoes
+saved $10. The two rain rows were placeholder books (no veto cost). BAC settled
+on the 10-14 12:48Z tick and no retro graded it; reconcile.py flagged it. No
+boundary change.
+
+Seattle 0.10 was wrong. KSEA obhistory showed "Light Rain" at 03:53 and
+06:53 PDT with no 1/3/6h precip groups, and I read that as probably trace.
+The day resolved Yes. **Rule (weather, rain-yes markets): a reported
+"Light Rain" METAR at the resolution station in the climate day, with
+no explicit 0.00/T precip group, is a measurable-rain coin flip, not a
+<=0.10 residual. Floor own P(Yes) at 0.40 until the NWS CLI/CF6
+PRECIPITATION line prints, then use the CLI.** Phoenix (CLI-read 0.02)
+won as recorded, the same CLI-first method that the Atlanta supersede
+showed on 10-12.
+Evidence n=1 (this row). Re-grade the floor once 5 rain rows have hit it.
