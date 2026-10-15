@@ -2037,6 +2037,12 @@ move as favorable or adverse.
      quarter-to-a-third of a 0.04 "edge". All 7 losing bets of
      2026-07-30/31 bought the cheaper side (0.34-0.52) off proportional
      devigs (DEEP-2026-07-31).
+     The rule binds on the forecast row too, and on a heavy favourite's
+     Yes: in a 3-way soccer line the favourite's complement is the cheap
+     side, so record the power number, not a proportional/power blend.
+     RETRO-20261015-0400: Nashville 1.24/5.75/9.0 gave proportional 0.739
+     and power 0.782. I recorded 0.76, the mid was 0.795, and Nashville won
+     (dBrier +0.016). Power alone would have matched the book.
    - **Check line freshness before calling a divergence an edge.** Scraped
      aggregators lag; PM sports makers don't. If ANY book already matches
      PM's number, or reports are mixed, assume PM reflects the current line
