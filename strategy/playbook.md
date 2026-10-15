@@ -2456,6 +2456,25 @@ wide-spread veto's settled counterfactual record here is 1 missed win +
 get the same arithmetic as real fills — side, realizable ask, spread —
 never a narrative verdict.
 
+**Second graded instance (DEEP-2026-10-15, RETRO-20261015-1506): tail
+draw, calibration holds.** September PPI printed inside the ≥5.9% NSA
+YoY bucket. Six sibling forecast legs settled this cycle (all no-edge/
+market-agrees skips, no bet placed): ≤5.0% (a5fb8cc35987, est 0.10) No;
+5.5% (530960bc32f5, est 0.09) No; 5.6% (69e449bca2d8, est 0.10) No; 5.7%
+(9cfea4afc1b5, est 0.10) No; 5.8% (9a0d72124654, est 0.11) No; ≥5.9%
+(7917ceeb6cc6, est 0.31) **Yes**. Aggregate Brier: own 0.526 vs market
+mid 0.504 — market mid beat own by 0.022 in total, entirely attributable
+to the tail leg (own 0.31 vs mkt 0.35 on the bucket that hit: own Brier
+0.476 vs mkt 0.423, own worse by 0.054); the other five legs own beat
+mkt mid by a combined 0.031. Verdict: not a centring bias — under the
+sd=0.40 model centred ~5.68%, P(≥5.85%) works out to ≈0.33-0.34 by the
+normal tail, matching the 0.31 estimate almost exactly; landing in a
+31%-likely tail is ordinary sampling variance, not miscalibration.
+Track record now n=2 (July: WON, centre bucket; September: lost the
+draw on a well-calibrated tail, market mid edged own in aggregate). No
+model change from this instance — a third tail-ward miss in a row would
+be the point to revisit centring or widen sd.
+
 ## Primary batch graded (DEEP-2026-08-12, provisional pending UMA)
 
 The largest pre-registered disagreement batch on record settled on-chain
