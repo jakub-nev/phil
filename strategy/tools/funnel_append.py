@@ -22,7 +22,26 @@ REQUIRED = ("cycle", "tick_type", "screened", "escalated",
             "screener_batches", "researched", "placed")
 
 
+def drop_dup_last():
+    """Remove the last row only if it byte-equals an earlier row.
+
+    2026-10-15 00:0xZ FULL, pi4: a stale /tmp row file from 10-13 was
+    appended a second time, and git checkout/restore are approval-gated
+    here. Use per-cycle scratch files under reports/ to avoid that.
+    """
+    with open(FUNNEL, "rb") as f:
+        lines = f.read().rstrip(b"\n").split(b"\n")
+    if len(lines) < 2 or lines[-1] not in lines[:-1]:
+        sys.exit("--drop-dup-last: last row is not a duplicate; refusing")
+    with open(FUNNEL, "wb") as f:
+        f.write(b"\n".join(lines[:-1]) + b"\n")
+    print(f"dropped duplicate last row cycle={json.loads(lines[-1]).get('cycle')}")
+
+
 def main(argv):
+    if argv[1:] == ["--drop-dup-last"]:
+        drop_dup_last()
+        return
     amend = "--amend" in argv
     argv = [a for a in argv if a != "--amend"]
     if len(argv) != 2:
