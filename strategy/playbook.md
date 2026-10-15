@@ -1622,6 +1622,16 @@ Prefer, in order:
      a $1.2B Treasury penalty announced Oct 13 put GAAP EPS at 0.91 < 1.16.
      If the search finds nothing, the estimate still stays within 0.15 of
      the mid — a fat gap against base rate is evidence, not edge.
+   - **Threshold at/above consensus: beat-rate prior does not apply
+     (RETRO-20261015-2300, IBKR `5410794`).** Beat rates measure beating
+     *consensus*. When the market's threshold is >= the consensus central
+     estimate, estimate P(actual >= threshold) from the consensus-to-
+     threshold gap and the company's typical surprise size, not from "X
+     usually beats". A prior-quarter beat may not lift own estimate more
+     than 0.05 above the mid without quarter-specific evidence (monthly
+     metrics read, guidance). IBKR: threshold 0.70 vs consensus 0.67,
+     recorded 0.45 vs 0.325 mid on Q2's beat. It printed 0.67 and resolved
+     No. Evidence n=1, re-grade at n=5.
    - **"Consensus clears the threshold" is not an edge when PM already
      prices it ≥~0.80** (CRCL 0.845, OXY 0.91): the market has the same
      consensus. The tradeable shapes are (i) PM price *contradicting* the
@@ -9351,3 +9361,16 @@ favored at 0.95 but the book (No ask 0.90, no No bid) failed max_spread.
 Second graded instance of the 2026-10-15 00:0xZ rain-yes CLI-first floor
 rule, on the opposite (No) side from the Seattle/Phoenix pair — consistent
 with that rule, no boundary change.
+
+## 2026-10-15 23:0xZ update: IBKR beat Q3 WSV row (FULL tick, pi4)
+
+| Row | own/mkt | Side | Edge | Result | CF pnl |
+|---|---|---|---|---|---|
+| IBKR beat Q3 adj EPS > 0.70 (`e78f553775d0`, WSV) | 0.45/0.325 | Yes | +0.050 (ask 0.40) | No | **-5.00** |
+
+Mechanical ledger (`core/counterfactual.py ledger --skip-reason
+wide-spread-veto`): WSV 86 rows, 72 fillable, 37W/35L, -$64.69, dBrier
+-0.0097. Previous: 85 rows, 71 fillable, 37W/34L, -$59.69, -0.0110. The
+veto saved $5.00 here. The estimate was wrong: I applied the beat-rate
+prior to a threshold above consensus. The new earnings sub-rule
+"Threshold at/above consensus" encodes that. No spread-boundary change.
