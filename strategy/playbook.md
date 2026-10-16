@@ -8521,6 +8521,18 @@ read. The 90-day legs stay forecast-only (`unvalidated-method`).
   **Runoff rows apply the right-ward correction at FULL weight
   (centre ~6pt on margin, the 6-9pt spread folded into sd). Still
   `unvalidated-method`, forecast-only.**
+  **Update RETRO-20261016-0700 (Rio governor, 0fb692abd6cc /
+  beee63a55370, both lost at 0.89/0.80, market-agrees):** final polls had
+  Paes (PSD) +9 to +13 over Ruas (PL) in R1. The result was Ruas +6.5, a
+  ~15pt+ miss in the same direction, so this is the first STATE-level
+  point. **The right-ward correction applies to Brazilian governor and
+  senate races too, at FULL weight, with a wider sd than the national
+  race (state polls missed by about 2x).** Second rule, from the same
+  settlement: **before pricing any Brazilian leg that depends on a
+  first-round outright win or on a runoff happening, check which
+  candidacies are sub judice (TRE denied, TSE appeal pending).** Annulled
+  votes leave the valid-vote denominator. The 274k annulled Garotinho
+  votes moved Ruas from 49.27% to ~50.9% and cancelled the runoff.
 - **USGS weekly count (dc9200183ac0, 2026-10-04 12:17Z, '7' leg 0.48 at
   "count 7"): count not reproducible.** A USGS query at the deep retro
   (Sep 28 04:00Z to Oct 5 04:00Z, M>=5.5) lists 6 events: MAR 5.5,
