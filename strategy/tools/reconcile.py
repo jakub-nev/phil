@@ -137,16 +137,26 @@ def main():
                     f"funnel {entry.get('cycle')} missing pool_total"
                 )
         researched = entry.get("researched", [])
+        if isinstance(researched, str):
+            # 2026-10-17 00:0xZ FULL, pi4: the stringified 2026-10-14T1400Z
+            # row kept this check at FAIL on 10-16 21Z and 10-17 00Z although
+            # it sits outside the window, masking any new gap. Recover its
+            # forecast ids when the string parses; flag only recent rows.
+            try:
+                researched = json.loads(researched)
+            except json.JSONDecodeError:
+                pass
         if not isinstance(researched, list) or not all(
             isinstance(c, dict) for c in researched
         ):
             # 2026-10-07: two hand-built finish scripts json.dumps'd the
             # researched list into a string, which crashed this loop and
             # hid 25 untabled veto rows for a day. Report, never crash.
-            schema_gaps.append(
-                f"funnel {entry.get('cycle')} researched is not a list of "
-                "objects (stringified?)"
-            )
+            if recent:
+                schema_gaps.append(
+                    f"funnel {entry.get('cycle')} researched is not a list of "
+                    "objects (stringified?)"
+                )
             continue
         for cand in researched:
             fid = cand.get("forecast_id")

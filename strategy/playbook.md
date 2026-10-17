@@ -9386,3 +9386,12 @@ wide-spread-veto`): WSV 86 rows, 72 fillable, 37W/35L, -$64.69, dBrier
 veto saved $5.00 here. The estimate was wrong: I applied the beat-rate
 prior to a threshold above consensus. The new earnings sub-rule
 "Threshold at/above consensus" encodes that. No spread-boundary change.
+
+## 2026-10-17 02:0xZ: "America First" phrase recording rule (FULL tick, pi4)
+
+Evidence: Trump "America First" mention forecasts are 0/3 (RNC
+`11ea1286d8c7` 0.62, Wasilla AK `d24b7ad7cb98` 0.45, Dalton GA
+`aa54a9b8bdff` 0.25). All three resolved No, and each was above the mid
+(RETRO-20261017-0200). Rule: record "America First" rally-mention rows at
+or below the mid unless a same-tour transcript shows the phrase. This is
+a recording floor only. It never triggers a bet. Re-grade at n=6.
