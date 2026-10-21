@@ -7931,6 +7931,12 @@ resolved No.
   qualitative "others see the next meeting" read does not.** Fading the
   far tail stays allowed when a numeric poll has no camp there.
   The operator runner graded the same settlement in RETRO-20261007-0917.
+  Third instance, BoI Oct 21 (RETRO-20261021-1600): hold recorded at 0.82
+  against a mid of 0.85 with "no October economist poll found". Hold
+  happened (-0.0099). **Scope: the rule also covers a single binary on the
+  consensus outcome (hold/no-change or the consensus move), not only
+  multi-leg ladders.** That row slipped through because it was not a
+  ladder.
 - **USGS daily-max ladder, in-progress Poisson: first settled event
   (RETRO-20261001-2015).** Sep 30 ladder (c7cceb5a2381, 603ce1291e65,
   e879bdcdfa8c, 1150efff6222): observed max 5.6 with 3.7h left, 365d
