@@ -9432,3 +9432,16 @@ Net CF: 0W/5L, so the vetoes saved about $25 of stake. The three MrBeast
 rows are the last-night count-projection failure that
 RETRO-20261021-1100 already encoded as a gate. There is no boundary
 change, because all five vetoes worked as designed.
+
+## 2026-10-21 21:0xZ: MrBeast day-4 OVV row (documented exclusion, FULL tick, pi4)
+
+reconcile.py check 5 flagged `8a2f9161245c`, which settled on the 20:04Z
+LIGHT tick. RETRO-20261021-2004 graded it but did not document it here.
+The hand-kept table stays frozen (DEEP-2026-09-30), so this is a
+documented exclusion:
+
+- `8a2f9161245c` MrBeast day-4 115-117M views, outside-view-veto, Yes 0.82 vs mid 0.925. CF No lost (-$5); the veto was right.
+
+Lesson for the settlement retro itself: a veto row graded in a retro
+still needs this one line in the playbook in the same commit, or
+reconcile flags it on the next FULL.
