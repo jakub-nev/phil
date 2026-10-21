@@ -9405,3 +9405,24 @@ Evidence: Trump "America First" mention forecasts are 0/3 (RNC
 (RETRO-20261017-0200). Rule: record "America First" rally-mention rows at
 or below the mid unless a same-tour transcript shows the phrase. This is
 a recording floor only. It never triggers a bet. Re-grade at n=6.
+
+## 2026-10-21 14:0xZ: veto settlements from the Oct17-21 outage (documented exclusions, FULL tick, pi4)
+
+`strategy/tools/reconcile.py` check 5 flagged five settled veto rows that
+are absent from this file. They settled during the Oct17-21 silent-tick
+outage and were batch-settled before RETRO-20261021-1100. Under the
+DEEP-2026-09-30 ruling the hand-kept table stays frozen and
+`core/counterfactual.py ledger` is authoritative, so these rows are
+documented exclusions from the table. Each counterfactual (CF) trade takes
+the side the estimate favoured over the mid:
+
+- `2ae729db32f5` China Q3 GDP 4.3-4.6, outside-view-veto, No est 0.55 vs mid 0.335. CF No lost (-$5); the veto was right.
+- `c7ab8f8199d6` MrBeast wk2 270-280, wide-spread-veto, Yes 0.42 vs 0.545. CF No lost; the veto was right.
+- `f1223c355ebb` same market, wide-spread-veto, Yes 0.50 vs 0.61. CF No lost; the veto was right.
+- `7ba1b9deed93` MrBeast wk2 260-270, wide-spread-veto, Yes 0.50 vs 0.39. CF Yes lost; the veto was right.
+- `0011d9ce3ea8` USGS Oct12-18 count 8, wide-spread-veto, Yes 0.15 vs 0.0555. CF Yes lost; the veto was right.
+
+Net CF: 0W/5L, so the vetoes saved about $25 of stake. The three MrBeast
+rows are the last-night count-projection failure that
+RETRO-20261021-1100 already encoded as a gate. There is no boundary
+change, because all five vetoes worked as designed.
