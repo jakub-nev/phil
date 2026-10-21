@@ -3100,6 +3100,16 @@ being projected. Use the pace from the same UTC hours a day earlier,
 scaled by the multi-day decay, or the trailing 24h average. A decline
 that only shows up in a trough window is not evidence of decay.
 
+**Last-night count projections are gated (RETRO-20261021-1100, MrBeast
+plN7JMbadRg wk2, second breach of the rule above).** The 02:05Z and
+05:05Z Oct17 rows projected the 16:00Z total from the US-night RYD pace
+(~0.145M/h) and moved from 0.60 to 0.42-0.50 on 270-280. The count crossed
+270M, and four rows cost -0.62 dBrier in total. The rule above already
+forbade this, so it is now a gate. A count projection recorded within 18h
+of the deadline must name its pace source in the note: `pace=trailing24h`
+or `pace=same-hours-yday`. Any other pace means the row may not move the
+estimate further from the mid than the previous dated row did.
+
 **2026-09-04 update (LIGHT tick 06:29Z, settled by resolve.py; 4 rows,
 two OpenAI Astra release-timeline markets, two sequential snapshots
 each):**

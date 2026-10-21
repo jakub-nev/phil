@@ -4179,3 +4179,21 @@ There are no new hourly proposals since DEEP-10-10.
   be satisfied on pi4, and the open-position monitor falls back to score.py
   marks. Ask: allow `python3 strategy/tools/*.py` in the pi4 runner's permission set.
   Status: PROPOSED.
+
+## 2026-10-21 11:0xZ (FULL, pi4): about 100 consecutive silent pi4 ticks, Oct 17 07:00Z to Oct 21 10:00Z
+
+- **(new, high) Silent ticks:** origin/main has 105 `lease: pi4 acquired` and
+  103 `released` commits since 2026-10-17 06:00Z, and no cycle or retro commit
+  until this one. That is about 4 days with no settle, no monitor, no scan.
+  The last work on disk is the Oct17 07:00Z FULL. Its `screen.py collect`
+  appended 300 rows to journal/screener.jsonl and bumped
+  journal/screener-quota/pi4.json (day 2026-10-17, 60 batches), and then the
+  session ended without a log line or commit. Those files sat uncommitted
+  until this tick, which commits them. loop.sh swallows the claude exit code
+  ("cycle $i failed; continuing"), so the cause is invisible from the repo.
+  Likely candidates: a usage/quota wall on the subscription, an auth
+  expiry, or a hang killed by a timer. Ask: have loop.sh append the claude
+  exit code and the last stderr line to a journal file, or post a
+  `lease:` release note with the code. Then a silent outage shows up in
+  git within one tick instead of four days.
+  Status: PROPOSED.
