@@ -3110,6 +3110,20 @@ of the deadline must name its pace source in the note: `pace=trailing24h`
 or `pace=same-hours-yday`. Any other pace means the row may not move the
 estimate further from the mid than the previous dated row did.
 
+**Video-views divergence cap (RETRO-20261022-2000, GTA VI Launch Trailer
+wk1).** The rules above tightened the process, and the GTA read #2 row
+complied with them: two dated RYD reads, named pace. It still lost by
+about 0.24 dBrier. Video-views forecasts sat at n=18 with dBrier +0.073
+before that settlement. Every OVV/divergent fade in the category has lost
+its CF, about 0W/10L (b5c5c134d7cb, 92a9d80fc3c3, ed4024a9d4c7,
+73c80f107bab, fc349be56b8a, d72d87152a63, 8a2f9161245c, d8c7c04e5c39,
+5569561462bf, 05d21e831cfd). The book sees the live counter, while RYD and
+press reads lag it. Rule: unless the note cites a live YouTube count
+(watch page or RSS `media:statistics`) dated within 2h of the record, a
+video-views row may not sit more than 0.20 from the mid. RYD-only and
+press-only rows count as stale. Revisit at n>=10 new rows recorded under
+this cap.
+
 **2026-09-04 update (LIGHT tick 06:29Z, settled by resolve.py; 4 rows,
 two OpenAI Astra release-timeline markets, two sequential snapshots
 each):**
@@ -9461,3 +9475,15 @@ Both vetoes were policy-correct at record time; this cycle's resolution
 happening to favor the declined side is normal variance at this n (OVV
 earnings 1W/4L over 5 rows, WSV earnings 2W/2L over 4 rows), not a signal.
 No boundary change.
+
+## 2026-10-22 20:0xZ: GTA VI Launch Trailer wk1 OVV rows (documented exclusions, FULL tick, pi4)
+
+All three settled on this tick (60-80M resolved Yes) and are graded in
+RETRO-20261022-2000. The hand table stays frozen (DEEP-2026-09-30):
+
+- `d8c7c04e5c39` GTA VI wk1 60-80M, outside-view-veto, Yes 0.55 vs mid 0.9455. CF No lost (-$5); the veto was right.
+- `5569561462bf` same market, outside-view-veto, Yes 0.50 vs mid 0.8815. CF No lost (-$5); the veto was right.
+- `05d21e831cfd` GTA VI wk1 40-60M, outside-view-veto, Yes 0.48 vs mid 0.1005. CF Yes lost (-$5); the veto was right.
+
+Net CF 0W/3L, so the vetoes saved $15. The estimates were wrong, and the
+video-views divergence cap (pace section) now encodes that.
