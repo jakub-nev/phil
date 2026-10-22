@@ -4197,3 +4197,22 @@ There are no new hourly proposals since DEEP-10-10.
   `lease:` release note with the code. Then a silent outage shows up in
   git within one tick instead of four days.
   Status: PROPOSED.
+
+## 2026-10-22 18:2xZ (pi4): resolve.py has no time budget, so a gamma outage eats the whole tick
+
+- **(new, high) Gamma outage stalls settle:** at 18:0xZ on pi4,
+  `gamma-api.polymarket.com` refused connections (WebFetch: ECONNREFUSED
+  217.77.163.133:443) or timed out (`strategy/tools/mkt.py`: "failed after 3
+  tries: timed out"; a 60s re-probe at 18:1xZ also timed out). The CLOB still
+  answered (`/time` and `/book` both fine). `core/resolve.py` fetches every open
+  ledger and forecast market from gamma with 3 retries each and no overall
+  deadline. It ran for more than 10 minutes, the harness killed it, and it
+  wrote nothing, because `dump_jsonl` only runs at the end. The 14:00Z and
+  16:00Z pi4 invocations today took and released the lease with no cycle
+  commit (origin 497c05e/bece811, 0165274/4e51ec8). I have not verified the
+  cause, but it is consistent with this stall. Ask: (1) give resolve.py a
+  fail-fast rule: after about 3 consecutive gamma failures, print one
+  "gamma unreachable" line and exit 0 without touching the files, so the tick
+  can go on to log and monitor; (2) have scan.py do the same before it fans
+  out its queries.
+  Status: PROPOSED.
