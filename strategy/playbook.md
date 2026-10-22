@@ -9445,3 +9445,19 @@ documented exclusion:
 Lesson for the settlement retro itself: a veto row graded in a retro
 still needs this one line in the playbook in the same commit, or
 reconcile flags it on the next FULL.
+
+## 2026-10-22 02:0xZ: Meta >70k OVV + TSLA beat WSV rows (documented exclusions, LIGHT tick, pi4)
+
+Both settled in an earlier uncommitted resolve.py run (22:03-22:06Z on
+2026-10-21) and are graded in RETRO-20261022-0207:
+
+- `24f3afc4c5ad` Meta Q3 headcount >70000, outside-view-veto, No est 0.83
+  vs mid 0.665 (claimed edge 0.14 vs ask). CF No @0.69 won; +$2.25.
+- `c12e9d652013` TSLA beat Q3 non-GAAP EPS >0.43, wide-spread-veto, Yes est
+  0.50 vs ask 0.39 (claimed edge 0.11, spread 0.07 > max 0.06). CF Yes
+  @0.39 won; +$7.82.
+
+Both vetoes were policy-correct at record time; this cycle's resolution
+happening to favor the declined side is normal variance at this n (OVV
+earnings 1W/4L over 5 rows, WSV earnings 2W/2L over 4 rows), not a signal.
+No boundary change.
