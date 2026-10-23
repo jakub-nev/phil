@@ -4216,3 +4216,28 @@ There are no new hourly proposals since DEEP-10-10.
   can go on to log and monitor; (2) have scan.py do the same before it fans
   out its queries.
   Status: PROPOSED.
+
+## 2026-10-23 18:1xZ (LIGHT, pi4): `git push origin main` hits a silent permission wall on this runner, now recurring across 3+ days
+
+- **(new, high) Push blocked, no prompt resolves in-session:** on this
+  pi4 session, every `git push origin main` call (step 9, and the retry
+  after `git pull --rebase`) returned only "This command requires
+  approval" with no interactive prompt that resolves inside the run —
+  tried 4 times this tick (before and after a clean rebase onto origin's
+  own `lease: pi4 released` commit). `core/lease.py`'s internal push
+  (used by `acquire`/`release`) is unaffected — it reaches origin fine,
+  which is why the lease-release commit landed on origin while the cycle
+  commit sat local-only. Same failure mode already logged at
+  2026-10-21T18:05Z, 2026-10-22T07:06Z and 2026-10-22T07:08Z; this tick
+  adds a 4th/5th occurrence. Net effect: cycle/retro commits accumulate
+  unpushed on pi4's local main while origin only gets lease commits,
+  until an operator manually pushes or approves the tool call — by
+  2026-10-23T18:12Z local main was 1 cycle-commit ahead of origin with no
+  automatic path to reconcile. Ask: either grant this runner's permission
+  profile a standing allow for `git push origin main` (same trust level
+  as the `core/lease.py` push it already performs unprompted), or confirm
+  whether this is an intentional gate and, if so, give loop.sh a
+  fallback (e.g. shell out to a pre-authorized push helper) so unpushed
+  work doesn't silently pile up for days between manual operator
+  interventions.
+  Status: PROPOSED.
