@@ -9495,3 +9495,21 @@ RETRO-20261022-2000. The hand table stays frozen (DEEP-2026-09-30):
 
 Net CF 0W/3L, so the vetoes saved $15. The estimates were wrong, and the
 video-views divergence cap (pace section) now encodes that.
+
+## 2026-10-23 20:0xZ: UMich Oct final WSV pair (documented exclusions, FULL tick, pi4)
+
+Both rows settled at 16:02Z and were graded in RETRO-20261023-1800. That
+retro read the 2026-10-06 ruling as "retro only" and added no line here,
+so reconcile.py check 5 flagged both on this FULL tick. The hand table
+stays frozen (DEEP-2026-09-30); these are documented exclusions:
+
+- `2f8b20bc6692` UMich Oct final 46.0-48.9, wide-spread-veto, Yes 0.57 vs mid 0.475. Final 48.0, Yes won; RETRO-1800 CF +$3.06. The veto cost money.
+- `d96ac3d2c8b9` UMich Oct final 43.0-45.9, wide-spread-veto, Yes 0.39 vs mid 0.405. No won; RETRO-1800 CF +$2.35. The veto cost money.
+
+Net CF 2W/0L, about +$5.4 forgone. The prelim-to-final revision method
+(sd ~1.45) worked again, as it did on 3904e426ee6d. The cost came from
+the wide book (0.33/0.62), not from the estimate. n=2 on one event, below
+the WSV review trigger, so the boundary does not change. Process note:
+the 10-06 "retro only" ruling covers the table arithmetic, but reconcile
+still needs the id line here. A veto-settling LIGHT tick has to write
+both.
