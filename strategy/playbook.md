@@ -7951,6 +7951,14 @@ resolved No.
   consensus outcome (hold/no-change or the consensus move), not only
   multi-leg ladders.** That row slipped through because it was not a
   ladder.
+  Fourth instance, CBR Oct 23 (RETRO-20261023-1400): hold happened. The
+  Oct 10-17 rows that rested on qualitative quotes under-weighted the hold
+  and all lost to the book: hold 0.79 and 0.85 vs mids 0.87 and 0.90, cut
+  0.17 vs 0.125 (sum about +0.054). The day-of row backed by the numeric
+  Izvestia poll beat the book: P(no cut) 0.87 vs 0.805, bet 604a104fd9bf
+  +$1.17. Observation, n=2 (RBI 50+ tail, CBR cut): a late PM move toward
+  a camp that the numeric poll barely has is the fade that has paid. Not
+  a rule yet.
 - **USGS daily-max ladder, in-progress Poisson: first settled event
   (RETRO-20261001-2015).** Sep 30 ladder (c7cceb5a2381, 603ce1291e65,
   e879bdcdfa8c, 1150efff6222): observed max 5.6 with 3.7h left, 365d
