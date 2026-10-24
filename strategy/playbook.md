@@ -9533,3 +9533,15 @@ market-agrees. Any random-walk divergence goes in the note as "own view",
 tagged `unvalidated-method`, and never counts as edge. When the ladder is
 diffuse (no bin >= 0.6), my model may disagree, but it needs sd >= 1c with
 fat tails. Realized moves were 0.73c, 2.25c, and <0.75c. Re-grade at 6 events.
+
+## 2026-10-24 22:0xZ: empty-book forecast credit is not edge (RETRO-20261024-2200)
+
+- `8d2dbe8ca622` LA rain Oct 23, no-book, Yes 0.02 vs mid 0.481 (book 0.004/0.958, liq $12). No won: dBrier -0.231. That is a placeholder-mid artifact, not skill: no tradable price was offered.
+
+**Rule.** When weighing a category's forecast `brier_delta` for a boundary
+call (e.g. lifting the weather moratorium), run
+`python3 strategy/tools/emptybook_split.py <cat>` and use the real-book
+line only. Weather today: empty-book n=6 dB -0.097, real-book n=46 dB
+-0.019. That is a 52-row tool total against score.py's n=49 -0.044, so the
+two aren't exactly comparable. Still, 6 rows supply ~40% of the summed
+credit.
