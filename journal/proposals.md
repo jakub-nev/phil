@@ -4216,6 +4216,16 @@ There are no new hourly proposals since DEEP-10-10.
   can go on to log and monitor; (2) have scan.py do the same before it fans
   out its queries.
   Status: PROPOSED.
+- **Recurrence 2026-10-24 18:0x-18:3xZ (pi4):** it happened again, at the
+  same hour as on 10-22. `core/score.py` still fetched live mids at about
+  18:02Z. After that, `core/resolve.py` ran past the 10-minute harness limit
+  and was killed, leaving the tree clean. Two `core/scan.py` runs, at 18:23Z
+  and 18:30Z, failed all 4 queries with `[Errno 101] Network is unreachable`.
+  GitHub fetch worked throughout. Errno 101, rather than a timeout, points to
+  a lost route on the Pi, possibly IPv6-only. Both 18Z outages on pi4 fall
+  in the same window, so (3) the operator should check the Pi's network for
+  something scheduled around 18Z, such as a DHCP lease, a router job or a
+  daily reconnect.
 
 ## 2026-10-23 18:1xZ (LIGHT, pi4): `git push origin main` hits a silent permission wall on this runner, now recurring across 3+ days
 
