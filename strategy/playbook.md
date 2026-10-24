@@ -7921,6 +7921,13 @@ resolved No.
   barrier, est_prob is the raw touch.py value and the reversal view goes
   in the note as "shade view: X", like an inferred open (2026-09-25 rule).
   Recording rule only; touch stays forecast-only.
+  Tally update RETRO-20261024-1600: +1 within-0.05 row (BTC dip 80K Oct
+  b699bd7a03d5, own 0.68 vs mid 0.645, touched, -0.0236). The counts above
+  were last re-summed at 10-02, so re-count from forecasts.jsonl before
+  citing them. The raw touch.py value (0.727, measured DVOL) beat the x0.75
+  shade (0.641) by 0.054 Brier. The spot was not through the barrier, but
+  the same rule applies to measured-vol rows: est_prob = raw touch.py, and
+  any haircut goes in the note as "shade view: X".
 - **Validated-feed sweep, 10-06 retirement test already decided.** The
   test was "retire if no leg outside the Parcl set shows ask-edge >=
   min_edge". USGS '7' bucket 9a2944acc280 (Yes @0.12, own 0.16, edge
