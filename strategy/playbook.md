@@ -9520,3 +9520,16 @@ the WSV review trigger, so the boundary does not change. Process note:
 the 10-06 "retro only" ruling covers the table arithmetic, but reconcile
 still needs the id line here. A veto-settling LIGHT tick has to write
 both.
+
+## 2026-10-24 20:0xZ: AAA gas Oct 24 WSV row + pre-print daily-bracket rule (RETRO-20261024-2000)
+
+- `8d6e4f0c169e` AAA gas Oct 24 4.29-4.2999, wide-spread-veto, Yes 0.72 vs mid 0.91. Yes won; CF No @0.13 lost (-$5). The veto was right.
+
+**Rule (n=3 events: Oct 16, Oct 23, Oct 24).** On AAA daily $0.01 point
+brackets before the day's print: if the ladder is already concentrated (one
+bin >= 0.85 and its neighbours <= 0.05), the book is reading a live
+station feed I cannot reach. Record that bin within 0.05 of the mid as
+market-agrees. Any random-walk divergence goes in the note as "own view",
+tagged `unvalidated-method`, and never counts as edge. When the ladder is
+diffuse (no bin >= 0.6), my model may disagree, but it needs sd >= 1c with
+fat tails. Realized moves were 0.73c, 2.25c, and <0.75c. Re-grade at 6 events.
