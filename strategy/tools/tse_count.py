@@ -20,6 +20,12 @@ municipalities; dados/<uf>/<uf><mun>-c<cargo>-e<ele>-u.json carries the
 municipality's candidate votes ('vap'), valid votes (v.vv), and counted vs
 total electorate (e.est / e.te). The national -r.json path 404s in 2026;
 the -u.json files carry the results.
+
+2026-10-25 22:xxZ FULL (runoff): 'uncounted_muni_electorate' only sums
+municipalities with ZERO sections in; I read AM's 689k as ~75% counted and
+recorded 0.92 (cb0083318681), when Manaus was at 2.97% of sections and
+Macapa at 0.68%. Each UF now prints sections_counted_pct and
+electorate_counted_pct -- read those before reading any projection.
 """
 import argparse
 import concurrent.futures as cf
@@ -54,10 +60,11 @@ def muni(args, uf, cd):
             d = fetch(url)
             votes = {c["nmu"]: int(c["vap"]) for c in walk(d)}
             return (uf, votes, int(d["v"]["vv"]), int(d["e"]["est"]),
-                    int(d["e"]["te"]), d["hg"])
+                    int(d["e"]["te"]), d["hg"],
+                    int(d["s"]["st"]), int(d["s"]["ts"]))
         except Exception:
             continue
-    return (uf, None, 0, 0, 0, None)
+    return (uf, None, 0, 0, 0, None, 0, 0)
 
 
 def main():
@@ -76,14 +83,19 @@ def main():
     with cf.ThreadPoolExecutor(64) as ex:
         res = list(ex.map(lambda j: muni(args, *j), jobs))
     agg, fails, latest = {}, 0, ""
-    for uf, votes, vv, est, te, hg in res:
+    for uf, votes, vv, est, te, hg, st, ts in res:
         if votes is None:
             fails += 1
             continue
         latest = max(latest, hg or "")
         a = agg.setdefault(uf, {"raw": [0] * (len(names) + 1),
                                 "proj": [0.0] * (len(names) + 1),
-                                "uncounted_te": 0})
+                                "uncounted_te": 0, "st": 0, "ts": 0,
+                                "est": 0, "te": 0})
+        a["st"] += st
+        a["ts"] += ts
+        a["est"] += est
+        a["te"] += te
         row = [votes.get(n, 0) for n in names] + [vv]
         scale = te / est if est else 0.0
         if not est:
@@ -101,7 +113,11 @@ def main():
                         for i, n in enumerate(names)},
             "projected": {n: round(100 * p[i] / p[-1], 2) if p[-1] else None
                           for i, n in enumerate(names)},
-            "uncounted_muni_electorate": a["uncounted_te"]}
+            "uncounted_muni_electorate": a["uncounted_te"],
+            "sections_counted_pct": round(100 * a["st"] / a["ts"], 2)
+            if a["ts"] else None,
+            "electorate_counted_pct": round(100 * a["est"] / a["te"], 2)
+            if a["te"] else None}
         tot_raw = [x + y for x, y in zip(tot_raw, r)]
         tot_proj = [x + y for x, y in zip(tot_proj, p)]
     out["total"] = {
