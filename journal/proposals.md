@@ -4226,6 +4226,16 @@ There are no new hourly proposals since DEEP-10-10.
   in the same window, so (3) the operator should check the Pi's network for
   something scheduled around 18Z, such as a DHCP lease, a router job or a
   daily reconnect.
+- **Recurrence 2026-10-25 14:0x-14:2xZ (pi4, FULL):** the outage happened
+  again, this time at 14Z, so the 18Z-schedule guess in (3) does not explain
+  it on its own. Both `core/resolve.py` runs (14:01Z, killed at the 10-minute
+  limit after 7 consecutive failures; restarted 14:13Z and failed again on its
+  first market) and all 4 `core/scan.py` queries (14:03Z) failed with
+  `[Errno 101] Network is unreachable`. `git fetch origin` over SSH worked at
+  14:00Z and 14:11Z. The tree stayed clean, and this was a FULL tick lost to
+  the outage, with 0 settled and 0 screened. This is the 3rd occurrence, and
+  the fail-fast asks (1) and (2) would have saved roughly 25 minutes of this
+  tick.
 
 ## 2026-10-23 18:1xZ (LIGHT, pi4): `git push origin main` hits a silent permission wall on this runner, now recurring across 3+ days
 
