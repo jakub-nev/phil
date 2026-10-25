@@ -9572,3 +9572,19 @@ The hand table stays frozen, so these are documented exclusions:
 
 - `272c7d26fc4c` Next Fable 5.2+ by Oct 24, outside-view-veto, Yes 0.70 vs mid 0.915. No won; CF No @0.09 **+$50.56** forgone. The veto cost money, and the row also broke the AI release-date anchoring rule (see that rule's 10-25 line).
 - `46c37ce244cc` BC Conservatives most seats, outside-view-veto, Yes 0.84 vs mid 0.935. Yes won; CF No @0.08 -$5.00. The veto was right.
+
+## 2026-10-25 18:0xZ: AAA gas week Oct 19-25 rows + pre-print rule event #4 (RETRO-20261025-1800)
+
+The hand table stays frozen, so these are documented exclusions:
+
+- `5fd6704bda9c` AAA gas Oct 25 4.29-4.2999, wide-spread-veto, Yes 0.52 vs mid 0.665. No won; CF No @0.37 **+$8.51** forgone. The veto cost money.
+- `d60ed7f3ae75` AAA gas wk Oct 19 high >=4.30, wide-spread-veto, Yes 0.20 vs mid 0.35 (placeholder book 0.06/0.64). No won; CF No @0.94 +$0.32. Essentially no edge on the fillable side.
+- `31573a6fc1f2` AAA gas wk Oct 19 high >=4.32, wide-spread-veto, Yes 0.08 vs mid 0.38. No won; CF refused (entry 0.97).
+- `5e939c1dd72c` superseded by `d60ed7f3ae75`; graded with it.
+
+**Pre-print rule tally, event #4 (Oct 25):** realized move <= -0.58c.
+Events so far: 0.73c, 2.25c, <0.75c, >=0.58c. Re-grade at 6 events.
+**Clarification (n=1, graded with the rule at 6 events):** a ladder whose
+top bin is in [0.6, 0.85) takes the diffuse branch. The own model is
+allowed, but it must use sd >= 1c with fat tails (Oct 25 used 0.8c, below
+the floor) and stays subject to the spread veto.
