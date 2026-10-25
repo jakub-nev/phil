@@ -1576,6 +1576,17 @@ every later-than-market lean lost (about 8 distinct markets). The n=8
 re-grade is met: rule KEPT. A cross-market floor from a sibling's live BID
 (`4323ab76d42b`, G4 Oct13 >= Argon Oct13 bid 0.89) is a positive finding
 and may move est_prob off the mid.
+RETRO-20261025-0800: first event where the shade view won. Fable 5.2+ by
+Oct 24 (`272c7d26fc4c` 0.70 vs mid 0.915, `f6e116eedd14` 0.78 vs 0.835)
+resolved No, dBrier -0.347 / -0.089, and the OVV CF forgone was +$50.56.
+Both rows broke this rule: they were recorded off-mid with no primary
+source. Compliance is checked when the row is recorded, and the outcome
+does not excuse a breach. The tally now stands at 1 event for the shade
+view, 3 against. Rule KEPT. Pre-registered: for each launch event, the note
+records whether an official teaser existed when the row was recorded. The
+Fable ladder had none; it was rumour-only (stealth tests, routing reports,
+an Azure catalog entry Oct 13 that preceded no launch within 11 days).
+At n>=3 events per side, re-grade the rule split by teaser vs rumour-only.
 
 **Treasury touch drift rule (RETRO-20260928-2215).** For a Treasury
 par-yield touch rung ("hit X% in <month>") with 5 or fewer prints left,
