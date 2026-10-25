@@ -9565,3 +9565,10 @@ line only. Weather today: empty-book n=6 dB -0.097, real-book n=46 dB
 -0.019. That is a 52-row tool total against score.py's n=49 -0.044, so the
 two aren't exactly comparable. Still, 6 rows supply ~40% of the summed
 credit.
+
+## 2026-10-25 08:0xZ: Fable 5.2+ and BC veto rows (RETRO-20261025-0800)
+
+The hand table stays frozen, so these are documented exclusions:
+
+- `272c7d26fc4c` Next Fable 5.2+ by Oct 24, outside-view-veto, Yes 0.70 vs mid 0.915. No won; CF No @0.09 **+$50.56** forgone. The veto cost money, and the row also broke the AI release-date anchoring rule (see that rule's 10-25 line).
+- `46c37ce244cc` BC Conservatives most seats, outside-view-veto, Yes 0.84 vs mid 0.935. Yes won; CF No @0.08 -$5.00. The veto was right.
