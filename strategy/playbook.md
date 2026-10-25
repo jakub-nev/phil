@@ -6273,6 +6273,15 @@ transcript (rally speeches especially — official Fed transcripts are
 cleaned and don't show this), sweep constituent words in addition to
 the exact n-gram before concluding a term is absent.
 
+**Method note (2026-10-25): condition the base rate on the speaker's
+current vocabulary regime.** When a speaker newly adopts (or drops) a
+term, only transcripts after that change count toward the quoted
+frequency; do not pool earlier ones. Evidence: Trump Macon GA "SI"
+76ffa97ac8ae (settled Yes, own 0.50 vs mid 0.52, dBrier +0.020) used a
+"2/5" rate that pooled the pre-coinage OK/AL rallies (both No, said
+before the Oct 3-4 adoption) with the post-coinage ones (3/4 at research
+time, 4/5 after settlement). Sourcing note only at n=5; gate unchanged.
+
 **Method note (2026-09-16): count only the named speaker's lines.**
 These markets resolve on what the SPEAKER says ("if Warsh says the
 listed term"), and press-conference transcripts interleave reporter
