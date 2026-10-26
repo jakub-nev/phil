@@ -8613,6 +8613,13 @@ read. The 90-day legs stay forecast-only (`unvalidated-method`).
   is still in force and graded. Evidence: on 10-25 at 22:09Z, AM 0.72 and
   AP 0.50 fell back to rows built under the correction, against mids of
   0.825 and 0.64. Both settled Yes, costing -0.168 dB.
+  **Margin-bracket grading, RETRO-20261026-1000:** the two national
+  "Lula by <4%" rows (2fc63d414ac7 0.08 vs mid 0.105, 75e80013ddcb 0.17
+  vs 0.195) settled Yes (margin 3.58) and cost about +0.045 and +0.041
+  dB. They are the same correlated draw as the retired correction, with
+  no new rule. Bracket legs inherit the centre's error in full, so under
+  the uncorrected-average rule a bracket row only departs from the mid
+  when the centre itself does.
 - **Regime-aligned pollster split (RETRO-20261026-0600, Serbia Oct 25
   snap election, n=1):** b9f872f46c22 put 'Vucic - United Serbia' most
   seats at 0.62 (mid 0.625) by averaging the government-leaning Faktor
