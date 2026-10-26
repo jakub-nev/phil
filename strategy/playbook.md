@@ -8586,6 +8586,21 @@ read. The 90-day legs stay forecast-only (`unvalidated-method`).
   **Runoff rows apply the right-ward correction at FULL weight
   (centre ~6pt on margin, the 6-9pt spread folded into sd). Still
   `unvalidated-method`, forecast-only.**
+  **RETIRED for two-candidate rounds, RETRO-20261026-0400 (Brazil R2
+  settled, Lula 51.79 / Flavio 48.21).** Final polls had Flavio ~50.8
+  valid, so the PT-share error was +2.6 toward LULA. The 0.6-weight
+  carry-forward centred the runoff at F+3, a 6.6pt miss, and every
+  pre-count runoff row sat on the wrong side. The R1 miss lived in the
+  minor-candidate share (RETRO-20261005-1017), which a runoff does not
+  have. Runoff PT-share errors are mixed in sign (2018 ~0, 2022 ~-1.1,
+  2026 +2.6). **Rule: in a two-candidate round, centre on the
+  uncorrected poll average, with margin sd >= 4pt. Keep the right-ward
+  correction only for multi-candidate first rounds, and apply it to the
+  right candidate's share.** This covers state runoffs too.
+  tse_count.py has now been graded on both rounds (R1 -0.32pt at 64.8% of
+  sections, R2 +0.02pt at ~95%). It counts as a graded count-projection
+  method for Brazil (n=2), usable as primary evidence at the count stage.
+  Read `sections_counted_pct`, not uncounted_muni_electorate.
   **Update RETRO-20261016-0700 (Rio governor, 0fb692abd6cc /
   beee63a55370, both lost at 0.89/0.80, market-agrees):** final polls had
   Paes (PSD) +9 to +13 over Ruas (PL) in R1. The result was Ruas +6.5, a
