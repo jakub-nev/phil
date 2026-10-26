@@ -90,6 +90,15 @@ hour. You are not placing bets and you are not the researcher.
   0.80 vs 0.345. Every one was skipped at research as stale-prior
   ignorance, per journal/cycles.log. Three cycles had no usable
   screener output.)
+- **HARD RULE, same treatment: the 2026 Israeli legislative election
+  (most seats, seat-count bands, rank placings, next Prime Minister).**
+  Party lists merged and renamed after my cutoff (Yashar, Together, and
+  others), so my seat priors describe parties that no longer exist in
+  that form. Divergence at most 0.05, confidence `low`, unless the market
+  text names a contradicting fact. (2026-10-26 08:00Z FULL: once the
+  midterm rule took effect, 7 of 15 escalations went to this shape, e.g.
+  Yashar most seats 0.35 vs mid 0.73 and Eisenkot PM 0.40 vs 0.54. None
+  carried a fact.)
 
 ## Traps that have cost this experiment money
 

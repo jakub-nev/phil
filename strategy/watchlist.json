@@ -56,16 +56,17 @@
     "Amended 2026-09-17 16:0xZ (FULL cycle, operator machine): added the core PCE YoY 3.3pct price move (new open position 8894592b953a, No @0.68) and calendar entries for the UMich final (Sep 25) and the BEA August PCE release (Sep 30).",
     "Amended 2026-09-21 02:3xZ (TRIGGERED cycle, cloud): raised the core PCE (3938031) move_threshold 0.05 -> 0.10. Three fires on this exact key in three days (Sep18 15:22Z +0.070, Sep20 12:52Z -0.050, Sep21 02:37Z -0.065), each individually researched (WebSearch/WebFetch) and each confirmed no dated news catalyst -- the observed CLOB spread on this token has run 0.01-0.10 across the same window, i.e. within spread-noise range of the 0.05 threshold on a thin ($660 liquidity) book. 0.10 still catches a real consensus-forming move (a genuine settle-on-3.3 signal implies a much larger repricing toward the extremes) while filtering the bid/ask wobble this item has fired on three times running for zero bets.",
     "Amended 2026-09-24 07:4xZ (TRIGGERED cycle, cloud): pruned the SNB Sep24 calendar entry and its paired price_move (market 4443883) -- the decision is out (SNB's own press release, pre_20260924: policy rate held at 0%, matching the no-change Yes side exactly). No-side edge already exhausted pre-print (CLOB bid 0.999, no ask); nothing left to watch for on this market.",
-    "Amended 2026-09-30 00:5xZ (TRIGGERED cycle: pricemove:3938031, cloud): pruned five watch.py-reported expired price_moves, all Sep 20/21-election items whose positions have since settled (23e40bbbccc5 lost, 9074e3f2fd49 won, 475edf2e2654 won, 7ec71e307f12 lost -- MV CDU, Russia UR sweep, Russia turnout, Berlin Linke) plus the Xi-visit market-agrees entry (forecast 65f80b2eb530, past its Sep25 expiry, no reversal ever fired). Also pruned the UMich Sep25 calendar entry (forecast 3904e426ee6d settled WON, already graded). This tick's trigger, the core-PCE (3938031) price move, is the fourth fire on this key: mid spiked 0.73->0.955 over 00:44-00:51Z then reverted to 0.85 by 00:52Z (prices-history 1min bars) -- a thin-book print, not a sustained repricing, same pattern as the three Sep18/20/21 fires that motivated the 0.05->0.10 threshold raise. Left the threshold as-is: the entry expires at 12:00Z today (12.5h left, then the paired BEA calendar entry takes over at the actual release), too little runway left to be worth re-tuning."
+    "Amended 2026-09-30 00:5xZ (TRIGGERED cycle: pricemove:3938031, cloud): pruned five watch.py-reported expired price_moves, all Sep 20/21-election items whose positions have since settled (23e40bbbccc5 lost, 9074e3f2fd49 won, 475edf2e2654 won, 7ec71e307f12 lost -- MV CDU, Russia UR sweep, Russia turnout, Berlin Linke) plus the Xi-visit market-agrees entry (forecast 65f80b2eb530, past its Sep25 expiry, no reversal ever fired). Also pruned the UMich Sep25 calendar entry (forecast 3904e426ee6d settled WON, already graded). This tick's trigger, the core-PCE (3938031) price move, is the fourth fire on this key: mid spiked 0.73->0.955 over 00:44-00:51Z then reverted to 0.85 by 00:52Z (prices-history 1min bars) -- a thin-book print, not a sustained repricing, same pattern as the three Sep18/20/21 fires that motivated the 0.05->0.10 threshold raise. Left the threshold as-is: the entry expires at 12:00Z today (12.5h left, then the paired BEA calendar entry takes over at the actual release), too little runway left to be worth re-tuning.",
+    "Amended 2026-10-26 08:2xZ (FULL cycle, pi4): pruned the stale core-PCE price_move (3938031, expired Sep 30) and BEA Sep 30 calendar entry (both long settled). Added the Canada Aug GDP 0.2-0.3 price move (spread-only skip, forecast c5f975dffc81) and the StatCan Oct 30 12:30Z calendar entry for the ladder."
   ],
   "price_moves": [
     {
-      "market_id": "3938031",
-      "token_id": "39400114973934221253761872304842829808714135241326313029175177821282061696710",
-      "label": "Will Core PCE YoY be 3.3% in August? (No, open position 8894592b953a, entry 0.68, est No 0.76; a move toward Yes means a dated consensus or a bank tracker has settled on 3.3 -- re-read the camps (Fed staff/GS ~3.2 vs BofA/Cleveland ~3.4); BEA release Sep 30 12:30Z)",
-      "move_threshold": 0.1,
+      "market_id": "5155513",
+      "token_id": "57120832386932120570398152460333522540551162546504274387476958648151515945267",
+      "label": "Will Canada's GDP growth rate MoM in August 2026 be between 0.2% and 0.3%? (Yes, forecast c5f975dffc81 est 0.55 vs mid 0.465; skipped 2026-10-26 08:2xZ only on spread 0.42/0.51 > max_spread 0.06. A move DOWN toward 0.40 with a tight book is the bet window (edge >= 0.04 needs ask <= 0.51 with spread <= 0.06); a move UP means a dated preview converged on the flash +0.2 -- re-read, do not chase. StatCan release Oct 30 12:30Z)",
+      "move_threshold": 0.06,
       "window_min": 60,
-      "expires": "2026-09-30T12:00:00Z"
+      "expires": "2026-10-30T12:00:00Z"
     }
   ],
   "new_market": {
@@ -75,8 +76,8 @@
   },
   "calendar": [
     {
-      "label": "BEA August 2026 Personal Income and Outlays (12:30Z) - core PCE YoY, bet 8894592b953a No on 3.3pct @0.68 (forecast 60a82af6f2e6) plus forecast-only siblings 9f05a589aba3 (3.2 Yes 0.49, vetoed) / 66fb88403435 / 8356b12268ee and MoM 9a871262d874 -- grade the two-camp read: Fed staff ~3.2 + GS 3.16 vs BofA 3.4 + Cleveland 3.40 vs PM modal 3.3",
-      "fire_at": "2026-09-30T12:30:00Z",
+      "label": "StatCan August 2026 GDP by industry (12:30Z) - Canada Aug MoM ladder, flash +0.2: forecasts c5f975dffc81 (0.2-0.3 Yes 0.55), 830ed40da9c6 (0.0-0.1 0.30), c491e2d4c0a7 (0.4-0.5 0.07), acd4d6024f6b / 3b4f7cf5ecb4 / 89d7b54e3882 tails -- grade the flash-error-table normal fit (mean +0.02 sd 0.13) against the market's downside lean, and append the Aug flash error to the table",
+      "fire_at": "2026-10-30T12:30:00Z",
       "window_min": 45
     }
   ]
