@@ -8601,6 +8601,28 @@ read. The 90-day legs stay forecast-only (`unvalidated-method`).
   sections, R2 +0.02pt at ~95%). It counts as a graded count-projection
   method for Brazil (n=2), usable as primary evidence at the count stage.
   Read `sections_counted_pct`, not uncounted_muni_electorate.
+  **State R2 grading, RETRO-20261026-0600:** 14 pre-count state rows came
+  to -0.051 dB in total. The six rows built under the full-weight
+  correction (Oct 16-24) all sat Flavio-ward of the mid, came to -0.165,
+  and the book was right on all six. Lula carried AM, AP, PA, abroad and
+  MG, a uniform ~5.5pt swing against the R1 two-party baseline, so the
+  rows were one correlated draw. That confirms the retirement; no new
+  rule. **Correction-row rule (all families):** when I discard a datum I
+  misread or that turns out to be noise, the replacement row reverts to
+  the CURRENT MID. It reverts to an older own-row only if that row's model
+  is still in force and graded. Evidence: on 10-25 at 22:09Z, AM 0.72 and
+  AP 0.50 fell back to rows built under the correction, against mids of
+  0.825 and 0.64. Both settled Yes, costing -0.168 dB.
+- **Regime-aligned pollster split (RETRO-20261026-0600, Serbia Oct 25
+  snap election, n=1):** b9f872f46c22 put 'Vucic - United Serbia' most
+  seats at 0.62 (mid 0.625) by averaging the government-leaning Faktor
+  Plus (Vucic 48.6 / Students 37.1) with the independent CRTA (Students
+  44.9 / SNS 35.7). Result: Students ~52 / Vucic ~39.3. Faktor Plus
+  overstated the ruling list by ~9pt; CRTA had the right leader.
+  **Rule (forecast-level; n=1, revisit at n>=3):** in a competitive-
+  authoritarian election where polls split by regime alignment, give the
+  independent pollster's leader at least equal weight, and shade the
+  regime-aligned house's margin toward the opposition before averaging.
   **Update RETRO-20261016-0700 (Rio governor, 0fb692abd6cc /
   beee63a55370, both lost at 0.89/0.80, market-agrees):** final polls had
   Paes (PSD) +9 to +13 over Ruas (PL) in R1. The result was Ruas +6.5, a
