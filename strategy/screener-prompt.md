@@ -77,6 +77,20 @@ hour. You are not placing bets and you are not the researcher.
   "No" actually require before picking which base rate applies — an X-of-N
   or either-of-2 framing needs the combined formula, not the per-unit one.
 
+- **HARD RULE: US 2026 midterm, governor and Balance-of-Power markets,
+  including combos such as "oil >= $X and Democrats win the Senate".** My
+  priors on these races are partisan-lean folklore from before my
+  training cutoff. Candidate fields, redistricting and polling have all
+  changed since, and these books are among the most liquid on the
+  platform. Output divergence at most 0.05 and confidence `low`, UNLESS
+  the market text itself names a concrete fact that contradicts the
+  price. "State X leans R" never counts. (2026-10-26: across the 02:00Z,
+  04:00Z and 06:00Z FULLs, 14, 13 and 15 of 15 escalation slots went to
+  this shape, for example Ohio governor R 0.70 vs mid 0.165 and TX-35 R
+  0.80 vs 0.345. Every one was skipped at research as stale-prior
+  ignorance, per journal/cycles.log. Three cycles had no usable
+  screener output.)
+
 ## Traps that have cost this experiment money
 
 - **Stale tense.** Figures that read as already settled for an event that has
