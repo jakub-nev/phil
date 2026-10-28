@@ -9632,3 +9632,26 @@ Events so far: 0.73c, 2.25c, <0.75c, >=0.58c. Re-grade at 6 events.
 top bin is in [0.6, 0.85) takes the diffuse branch. The own model is
 allowed, but it must use sd >= 1c with fat tails (Oct 25 used 0.8c, below
 the floor) and stays subject to the spread veto.
+
+## 2026-10-28 14:0xZ: race-level anti-anchoring + gap-backlog veto rows (RETRO-20261028-1400)
+
+**Rule (provisional, 2 elections; re-grade at 4).** In a candidate race
+where I hold an open position, if the book moves against my model before I
+have found polls that explain the move, the next forecast row is recorded at
+the mid plus at most half my model's gap. A row is never labelled
+`position-held` above that. The riding-level half-gap rule
+(RETRO-20261007-0410) now applies at race level whenever a position is open.
+Evidence: Toronto Oct 26. Bet a84d79df2a06 (Bradford Yes, 0.40 @0.35) lost,
+and the four rows that followed sat on the Bradford side while the mid went
+0.345 -> 0.14. All lost to the mid, -0.163 summed. The explaining polls
+(Pollara C+9, Liaison Oct 25 C+8) arrived after the move. Brazil R2 showed
+the same book-right pattern (RETRO-20261026-0400/0600/1000).
+
+The hand table stays frozen, so these are documented exclusions (CF $5 flat,
+`counterfactual.py ledger --rows`):
+
+- OVV: `22f1ab38735d` RBNZ hike No +5.20; `e6b84256d356` Bulgaria 10-20 No +5.42; `33f5c912b062` Gyurov first Yes -5.00 (veto right); Clayface `819bf38b87ba` -5.00, `0511b52fa696` -5.00, `08c89d45af9b` +12.24, `02ba8b2f62b4` +8.16. Net +$16.02 forgone.
+- WSV: `7ed21a09e766` Wildwood 10-12 No **+26.25**; `5ef8924dc4fb` USGS 3x M6.5 +2.72; `40cbf12aeddd` Iotova <10 No -5.00 and `240dca69dea2` USGS No -5.00 (vetoes right). Net +$18.97 forgone.
+- Box office: these 5 rows from 2 films netted +$36.65 forgone. That is the first
+  batch where the press-centre method's disagreements paid. The standing
+  no-bet is unchanged at this n. Keep the tally.
