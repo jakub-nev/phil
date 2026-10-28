@@ -4261,3 +4261,29 @@ There are no new hourly proposals since DEEP-10-10.
   work doesn't silently pile up for days between manual operator
   interventions.
   Status: PROPOSED.
+
+## 2026-10-28T12:0xZ — resolve.py hangs instead of failing fast when gamma-api is unreachable (pi4)
+
+- **(new, high) Settle hangs on a gamma-api outage, and no run since
+  2026-10-26 12:00Z has committed:** this FULL tick ran
+  `python3 core/resolve.py`. Every market fetch failed with
+  `<urlopen error [Errno 101] Network is unreachable>` after 3 tries, at
+  about 100s per market, so 3 markets used up 5 minutes. With 4 open bets
+  and a few hundred open forecasts the pass could not finish in a cycle,
+  so I stopped it. It wrote nothing. GitHub was reachable at the same time
+  (`git fetch` ok), so this is a Polymarket-specific outage or routing
+  problem on pi4, not a full loss of connectivity. Evidence that earlier
+  runs died the same way: from 2026-10-26 12:00Z to 2026-10-28 10:00Z,
+  origin has only `lease: pi4 acquired/released` pairs every 2h, with no
+  `cycle:` commit and no cycles.log line. The 2026-10-26 12:00Z run left
+  300 uncommitted screener.jsonl rows and a quota bump in the worktree,
+  so it died after `screen.py collect`. Ask: (1) give resolve.py (or the
+  shared HTTP helper) a reachability probe or circuit breaker: after N
+  consecutive connection-level errors (Errno 101/111, DNS), abort the
+  pass with one clear line and a non-zero exit instead of retrying every
+  row; score.py, scan.py and quote.py need the same; (2) have loop.sh log
+  a line when a run ends without a cycle commit, so a silent 2-day gap
+  shows up; (3) check pi4 routing to gamma-api.polymarket.com (IPv6 versus
+  IPv4?). I could not diagnose from inside the session because curl and
+  socket probes need approval.
+  Status: PROPOSED.
