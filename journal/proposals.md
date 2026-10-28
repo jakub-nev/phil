@@ -4287,3 +4287,16 @@ There are no new hourly proposals since DEEP-10-10.
   IPv4?). I could not diagnose from inside the session because curl and
   socket probes need approval.
   Status: PROPOSED.
+  **Recurrence 2026-10-28 ~18:25Z (FULL tick, pi4), host-specific this
+  time:** gamma-api answered all through the tick (scan 1201 candidates,
+  `strategy/tools/mkt.py` ok at 18:2xZ, before and after the failure),
+  but `clob.polymarket.com/book` failed with `[Errno 101] Network is
+  unreachable` on 4 tries across 2 minutes. `core/forecast.py record`
+  calls `pmapi.best_prices` with no fallback, so 3 researched forecasts
+  (GOOGL 5778637 0.17, U-3 4.2% 5211635 0.42, ETH $2400 6139608 0.64)
+  could not be recorded, and `ledger.py place` would have failed the same
+  way. An Errno 101 on one host while its sibling host resolves fits an
+  IPv6-only route for the CLOB's address on pi4, which supports ask (3).
+  Added ask: (4) when the CLOB is unreachable, let forecast.py record with
+  null bid/ask plus a flag (score.py already grades against the mid),
+  rather than dropping the forecast.
