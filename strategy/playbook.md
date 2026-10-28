@@ -9655,3 +9655,21 @@ The hand table stays frozen, so these are documented exclusions (CF $5 flat,
 - Box office: these 5 rows from 2 films netted +$36.65 forgone. That is the first
   batch where the press-centre method's disagreements paid. The standing
   no-bet is unchanged at this n. Keep the tally.
+
+## 2026-10-28 16:00Z: CB decision legs: an economist poll is not licence to shade against swaps (RETRO-20261028-1600)
+
+BoC Oct 28 hiked 25bp. Two forecasts shaded the modal (hike) leg toward
+the minority: hold 66e7f7b6d989 (0.25 vs 0.2035, +0.021) and hike
+015c9563f723 (0.79 vs 0.8155, +0.010). The 0.79 cited the Reuters
+economist poll (56% hike) as licence to record below the mid; swaps sat
+at ~75-87% after Macklem's Oct 17 signal, and swaps were right. The
+at-market row 0afcb7afd398 (0.73 vs 0.72) scored best (-0.006).
+
+This is the third CB ladder with the same sign (RBI bc70aa63a6f0 /
+5b2e769d7bf6 under the RBI modal-leg rule, above). RULE, effective now:
+on a central-bank decision ladder, when the governor's public signal and
+swaps/OIS-implied odds point the same way, record the modal leg at or
+above the mid. An economist poll majority below the swaps-implied
+probability is not evidence for a below-mid record. Only a dated
+data print after the swaps read can move a leg off the mid. Forecast-
+only rule (no bet path changes). Re-grade at n=5 ladders.
