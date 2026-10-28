@@ -9673,3 +9673,9 @@ above the mid. An economist poll majority below the swaps-implied
 probability is not evidence for a below-mid record. Only a dated
 data print after the swaps read can move a leg off the mid. Forecast-
 only rule (no bet path changes). Re-grade at n=5 ladders.
+
+Documented exclusions (reconcile.py flagged at 16:00Z; Brazil R2 Oct 25,
+OVV rows from 2026-09-21, settled 10-26; CF $5 flat via
+`counterfactual.py ledger --rows --skip-reason outside-view-veto`):
+
+- OVV: `9c5be5868fda` Lula win Yes +7.82; `c67d8b6559ef` Flávio Bolsonaro win No +7.76. Net +$15.58 forgone. Both rows sided with the eventual winner a month out; the veto cost money here. Tally only; the relaxation fork stays NOT MET.
