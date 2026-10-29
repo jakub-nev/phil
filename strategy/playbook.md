@@ -9680,6 +9680,10 @@ the floor) and stays subject to the spread veto.
 move <= -1.71c (Oct28 4.2471 -> Oct29 print cleared the $4.23 line).
 Events so far: 0.73c, 2.25c, <0.75c, >=0.58c, <=-1.71c. Net dB across the
 3 rows this event: +0.0008 (flat, variance). Re-grade at 6 events.
+Documented exclusion (reconcile.py flagged at the 20:00Z FULL; the 18:00Z
+retro graded it but wrote no id line):
+
+- `d6ef362ef6a7` AAA gas Oct 29 < $4.23, wide-spread-veto, Yes 0.85. Yes won; CF No (edge +0.040) -$5.00. The veto was right.
 
 ## 2026-10-28 14:0xZ: race-level anti-anchoring + gap-backlog veto rows (RETRO-20261028-1400)
 
