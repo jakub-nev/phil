@@ -9676,6 +9676,11 @@ top bin is in [0.6, 0.85) takes the diffuse branch. The own model is
 allowed, but it must use sd >= 1c with fat tails (Oct 25 used 0.8c, below
 the floor) and stays subject to the spread veto.
 
+**Pre-print rule tally, event #5 (Oct 29, RETRO-20261029-1800):** realized
+move <= -1.71c (Oct28 4.2471 -> Oct29 print cleared the $4.23 line).
+Events so far: 0.73c, 2.25c, <0.75c, >=0.58c, <=-1.71c. Net dB across the
+3 rows this event: +0.0008 (flat, variance). Re-grade at 6 events.
+
 ## 2026-10-28 14:0xZ: race-level anti-anchoring + gap-backlog veto rows (RETRO-20261028-1400)
 
 **Rule (provisional, 2 elections; re-grade at 4).** In a candidate race
