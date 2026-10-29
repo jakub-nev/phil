@@ -2197,6 +2197,16 @@ move as favorable or adverse.
      of the two, and prefer superseding close to the settle over a single
      read hours out. Both rows won, so this is a calibration lesson
      (own Brier 0.0064 vs market 0.0042 on the early row), not a P&L one.
+   - **Post-settle source conflict on a close row: read the resolver's
+     feed, don't split vendors (RETRO-20261029-0200, n=1).**
+     `4c7cf20f5f30` (WTI Oct28 close > $102, Pyth CLL final RTH minute) had
+     CNBC "settled at 102.78" against an Investing.com table at 101.19. I
+     shrank to 0.30 because thin-book Yes asks collapsed 0.55 -> 0.17. It
+     resolved Yes, and a $5 Yes at 0.17 would have paid about +$24. Rule: once
+     the session has settled, fetch the resolution feed itself (Pyth benchmark
+     history for the symbol and minute) before shading. If it can't be read,
+     a matched-basis exchange settle report outranks a vendor history table.
+     Thin-book flow is never the tie-breaker against a published settle.
 5. **Check the live book first** (`python3 strategy/tools/quote.py
    <clob_token_id>`, token ids are in scan output; if the sandbox blocks it,
    `curl -s "https://clob.polymarket.com/book?token_id=<id>" -o work/book_<x>.json`
