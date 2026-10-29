@@ -9732,3 +9732,13 @@ Documented exclusion (reconcile.py flagged at the 2026-10-29 02:00Z FULL;
 settled 10-28 22:03Z, graded in RETRO-20261029-0000, table row owed since):
 
 - WSV: `375dab356d57` GOOGL GAAP beat > 3.10 Yes 0.22, superseded about 1 min later by `362af2859e45` 0.06. Book at record was a collapsed Yes ask 0.001 with no bid, so a fill would be refused (entry outside [0.02, 0.95]). Resolved No, so the veto was right either way. CF $0.00.
+
+## 2026-10-29 20:0xZ: Saudi-Yemen Sep 23 WSV row (RETRO-20261029-2000)
+
+- `ecca0a61ca2c` Saudi military action vs Yemen on Sep 23, wide-spread-veto, Yes 0.50 vs mid 0.555 (book 0.17/0.94). Yes won (settled 36 days late); CF No edge -0.330, -$5.00. The veto was right.
+
+Tally (n=2, forecast-only, re-grade at 5): inside an active, declared
+Saudi-Houthi campaign, single-day "military action on <date>" legs have
+settled Yes 2/2 (Sep 23, Oct 5). Record from the campaign's daily base
+rate, not a 0.50 coin flip. This row's 0.50 lost +0.052 to an
+uninformative mid.
