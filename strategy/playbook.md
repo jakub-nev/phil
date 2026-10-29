@@ -1613,6 +1613,14 @@ Prefer, in order:
      1.02 = print 1.02 (street 0.99); LLY ex-IPR&D build 12.06 vs print
      12.05. Use the build as the centre and consensus as a cross-check.
      Tentative (n=2) until 5 builds are graded against prints.
+   - **Above-consensus bars: the beat-history surprise model is fine, and it
+     carries no edge (RETRO-20261029-1600).** MA bar 5.32 sat +3.5% over the
+     5.14 consensus. A beat-history count (4-5 of 7 cleared 3.5%) gave 0.55
+     vs mid 0.585. The print was 5.31, missing by 1c (dBrier +0.040 vs the
+     mid). LLY also missed by 1c on 10-29. A centre near the line means ~0.5,
+     and neither side was right to bet. Use the model for forecast-only rows.
+     It is not an edge source unless a monthly-data build (above) moves the
+     centre off the line.
    Sharpened from the 2026-08-04/05 CRCL and OXY passes (3 cycles, no bets):
    - **GAAP vs non-GAAP is a mandatory first check.** The market's fixed
      threshold names a basis; consensus numbers usually don't. CRCL's
@@ -5673,6 +5681,16 @@ nudges within the consensus bucket); a nowcast-only centre is labelled
 `unvalidated-method`. Since the ladder already prices the consensus, expect
 `market-agrees` on most legs — that is the honest outcome, not a reason to
 search for a different centre.
+
+**Sep core PCE + Q3 GDP advance (RETRO-20261029-1600): the same rule held
+for PCE, and the GDP centre was shaded too far.** PCE: the consensus-centred
+rows (MoM 0.3 at 0.62, YoY 3.1 at 0.63) printed in the centre bucket, net
+dBrier about +0.02 vs the mid. GDP >3.0%: GDPNow 3.5 (Oct 20) was the
+closest benchmark to the 3.4 print. I blended it down to ~3.2 with NY Fed
+2.67 and recalled an unsourced sd of 1.1, which gave 0.58 vs mid 0.655
+(dBrier -0.057). For n=1, no rule. At the next GDP advance, record the
+GDPNow-only probability in the note next to the blend, so the two can be
+graded against each other. Source the nowcast-vs-advance sd before using it.
 
 **2026-08-21 update (18:11Z settlement): the Aug14-21 Musk weekly set's
 two >0.10-disagreement legs both settled, both LOST.** 240-259
