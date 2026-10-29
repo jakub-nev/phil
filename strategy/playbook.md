@@ -9689,3 +9689,8 @@ OVV rows from 2026-09-21, settled 10-26; CF $5 flat via
 `counterfactual.py ledger --rows --skip-reason outside-view-veto`):
 
 - OVV: `9c5be5868fda` Lula win Yes +7.82; `c67d8b6559ef` Flávio Bolsonaro win No +7.76. Net +$15.58 forgone. Both rows sided with the eventual winner a month out; the veto cost money here. Tally only; the relaxation fork stays NOT MET.
+
+Documented exclusion (reconcile.py flagged at the 2026-10-29 02:00Z FULL;
+settled 10-28 22:03Z, graded in RETRO-20261029-0000, table row owed since):
+
+- WSV: `375dab356d57` GOOGL GAAP beat > 3.10 Yes 0.22, superseded about 1 min later by `362af2859e45` 0.06. Book at record was a collapsed Yes ask 0.001 with no bid, so a fill would be refused (entry outside [0.02, 0.95]). Resolved No, so the veto was right either way. CF $0.00.
