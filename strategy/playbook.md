@@ -1606,6 +1606,13 @@ Prefer, in order:
    company's historical beat rate (most large caps beat 75–85% of quarters),
    recent guidance, peer results this season. Suspect mispricing when the
    price is far from the historical beat base rate without news to justify it.
+   - **Bottom-up build beats street consensus when monthly operating data
+     exists (RETRO-20261029-1400).** Exchanges/brokers (TW, IBKR, MKTX,
+     CME, Cboe, SCHW) publish monthly volume/fee reports: volume x variable
+     fee + fixed + data, then incremental margin -> EPS. TW Q3 2026 build
+     1.02 = print 1.02 (street 0.99); LLY ex-IPR&D build 12.06 vs print
+     12.05. Use the build as the centre and consensus as a cross-check.
+     Tentative (n=2) until 5 builds are graded against prints.
    Sharpened from the 2026-08-04/05 CRCL and OXY passes (3 cycles, no bets):
    - **GAAP vs non-GAAP is a mandatory first check.** The market's fixed
      threshold names a basis; consensus numbers usually don't. CRCL's
