@@ -7958,6 +7958,14 @@ resolved No.
   shade (0.641) by 0.054 Brier. The spot was not through the barrier, but
   the same rule applies to measured-vol rows: est_prob = raw touch.py, and
   any haircut goes in the note as "shade view: X".
+  Tally update RETRO-20261029-0400: +1 below-mid row (SOL dip $100 Oct28
+  d46601a4263f, own 0.50 vs mid 0.585, touched, -0.0778), the second
+  below-mid row to touch. Own 0.50 averaged touch.py at quiet measured vol
+  (0.41) with an FOMC-bumped vol (0.53), and the bumped value sat closer to
+  the market. Rule: when a scheduled macro catalyst (FOMC/CPI/NFP) falls
+  inside a touch window of 24h or less, est_prob = the catalyst-bumped
+  touch.py value, and the quiet-vol value goes in the note as "quiet view:
+  X". Never blend the two. Recording rule only.
 - **Validated-feed sweep, 10-06 retirement test already decided.** The
   test was "retire if no leg outside the Parcl set shows ask-edge >=
   min_edge". USGS '7' bucket 9a2944acc280 (Yes @0.12, own 0.16, edge
