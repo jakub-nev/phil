@@ -8090,6 +8090,15 @@ resolved No.
   +$1.17. Observation, n=2 (RBI 50+ tail, CBR cut): a late PM move toward
   a camp that the numeric poll barely has is the fade that has paid. Not
   a rule yet.
+  Fifth instance, BanRep Oct 30 (RETRO-20261030-2200): hold happened. The
+  Oct 17 hold row 41b244c10932 was recorded at 0.42 against a mid of 0.67,
+  on the numeric EME median (+25bp). It lost (+0.228). BanRep's surveys
+  have now missed three meetings in a row (Jul, Sep 30, Oct 30) on 4-3 and
+  4-2-1 boards. **Carve-out to the numeric-survey exception:** when the
+  last decision was a one-vote-margin split, or the survey consensus
+  missed the previous meeting, keep the modal and consensus legs within
+  0.10 of the mid. Put the survey read in the note as `model view:`. This
+  does not cover CBR or RBI, where the numeric-poll rows beat the book.
 - **USGS daily-max ladder, in-progress Poisson: first settled event
   (RETRO-20261001-2015).** Sep 30 ladder (c7cceb5a2381, 603ce1291e65,
   e879bdcdfa8c, 1150efff6222): observed max 5.6 with 3.7h left, 365d
