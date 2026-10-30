@@ -5727,6 +5727,26 @@ nowcast dated within 7 days of the release (GDPNow, an official
 flash-estimate model) sets the centre. Qualitative central-bank or press
 commentary may move the centre but never narrows the sd below the floor.
 
+**Release-eve book move (RETRO-20261030-1600, Mexico Q3 + Canada Aug).**
+For a GDP bracket row recorded within 24h of the release: if the book has
+moved > 0.15 against my centre bracket since my previous read and I cannot
+source the cause, record within 0.10 of the mid. Put my own read in the
+note as `model view:`. Evidence: Mexico 4ceeb7cc4bd5 (0.60 vs mid 0.895)
+and a4af3a7bd55c (0.30 vs 0.16, a partial shade) both lost to the mid. All
+five Mexico rows lost, and econ-gdp forecasts went from +0.009 to +0.020 on
+the day's four GDP releases. The rule is narrow on purpose (n = 1 event):
+it covers only the release-eve window, not multi-day reads.
+
+**StatCan tilt cap, first graded tilt (same retro).** Aug flash was +0.2 and
+the print was 0.0. I had three hard reads pointing down (wholesale volume
+-1.8, manufacturing flat, RBC below flash). The 0.05 cap held my 0.0-0.1
+bracket to 0.30 vs a mid of 0.37, and +0.09 dBrier on each live row
+followed. New cap: when >= 2 hard source-data releases published after the
+flash point the same way, the tilt may move up to 0.10 of bracket mass.
+Single-source or press-only tilts keep 0.05. Add Aug 2026 (flash 0.2 /
+first print 0.0, error -0.2) to the flash-error table, which now has 16
+months.
+
 **2026-08-21 update (18:11Z settlement): the Aug14-21 Musk weekly set's
 two >0.10-disagreement legs both settled, both LOST.** 240-259
 (cd3af116ed2a, No side, bid 0.252 vs est 0.16) lost to the actual count
@@ -7889,7 +7909,8 @@ family forecast-only.
 - **Rules carried out of the archived sections (unchanged, still live):**
   - JOLTS: record the LinkUp model centre. Do not tilt past consensus on
     soft signals. The cap is zero past consensus until there is graded
-    evidence. For StatCan GDP the cap is 0.05 of bracket mass.
+    evidence. For StatCan GDP the cap is 0.05 of bracket mass (0.10 with
+    >= 2 concordant hard post-flash reads, RETRO-20261030-1600).
     (RETRO-20260929-1800, n=1, wash.)
   - Econ ladders: record every bracket whose book was read, centre
     included. (The Aug JOLTS print landed in an unrecorded bracket.)
@@ -7903,6 +7924,11 @@ family forecast-only.
     result: keep it an observation, n=3 is too small for a rule, but a
     partial shade (hold most of the sourced read, move <= half way) has
     not lost in the three cases; prefer it over full deference.
+    Fourth instance (RETRO-20261030-1600): Mexico Q3 >=3.5, the book fell
+    to 0.09 with no sourced cause, I shaded 0.42 -> 0.30 (a4af3a7bd55c),
+    and it resolved No. The market was right, so discounting is now
+    2-for-4. Partial shading has now lost once. For GDP rows on release eve,
+    the narrower rule in the GDP flash section applies.
 - **Funnel row is not optional on a FULL cycle.** Two of the seven FULL
   cycles in the Sep 29 window wrote "Funnel: screened 300, escalated 15"
   into cycles.log but committed no `strategy/funnel.jsonl` row: 41b031e
