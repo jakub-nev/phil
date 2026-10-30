@@ -1621,6 +1621,12 @@ Prefer, in order:
      and neither side was right to bet. Use the model for forecast-only rows.
      It is not an edge source unless a monthly-data build (above) moves the
      centre off the line.
+     **Conflicting consensus (RETRO-20261030-0000).** PINS > 0.49: Yahoo
+     mean 0.49 vs Benzinga 0.38-0.41, own centre ~0.47, recorded 0.40 vs
+     mid 0.185; resolved No, dBrier +0.126. When snapshots conflict and the
+     bar equals the highest one, centre on the median snapshot. With no
+     monthly-data build, a centre below a strict bar is recorded at or
+     near the mid, never 2x it.
    Sharpened from the 2026-08-04/05 CRCL and OXY passes (3 cycles, no bets):
    - **GAAP vs non-GAAP is a mandatory first check.** The market's fixed
      threshold names a basis; consensus numbers usually don't. CRCL's
@@ -9746,3 +9752,7 @@ Saudi-Houthi campaign, single-day "military action on <date>" legs have
 settled Yes 2/2 (Sep 23, Oct 5). Record from the campaign's daily base
 rate, not a 0.50 coin flip. This row's 0.50 lost +0.052 to an
 uninformative mid.
+
+## 2026-10-30 00:0xZ: PINS beat WSV row (RETRO-20261030-0000)
+
+- `65ac60c288e9` PINS non-GAAP > 0.49, wide-spread-veto, Yes 0.40 vs mid 0.185 (book 0.06/0.31). Resolved No; CF Yes edge +0.090, -$5.00. The veto was right.
