@@ -5698,6 +5698,26 @@ closest benchmark to the 3.4 print. I blended it down to ~3.2 with NY Fed
 GDPNow-only probability in the note next to the blend, so the two can be
 graded against each other. Source the nowcast-vs-advance sd before using it.
 
+**German Q3 flash (RETRO-20261030-1200): second instance of the same
+shape, different country.** Destatis Q3 y/y price-adj printed 1.3%. Initial
+model (recorded 10-16, `edca3c54983a`/sibling `9d9f2e8b3a5e`) centred 1.15
+sd 0.30 from hard q/q accumulation (Eurostat quarterly prints) plus mixed
+soft commentary — wide enough that the 1.0-1.2% bucket (0.38) still beat the
+market (0.41) on the actual 1.3% outcome, dBrier -0.0237. The 10-29 revision
+(`65c4cce3c262`) narrowed sd to 0.18 and nudged the centre to ~1.05 on a
+single new soft source (Bundesbank Oct21 "probably stagnated"), which
+raised the 1.0-1.2% bucket to 0.58 (market-agrees) — a worse read of the
+same actual, dBrier 0.0 (no edge over market, but strictly worse than the
+wider prior estimate it replaced). Both this and the PCE/GDP case above
+narrowed a bracket's sd close to release on a single soft qualitative
+source, and both lost ground precisely where the narrowing bit. n=2, still
+no hard rule, but the shared direction is now flagged: don't let one late
+soft qualitative source (central-bank "stagnation"/"pause" language)
+narrow an already-reasoned sd without a hard-data source (industrial
+production, trade, quarterly accumulation) that actually supports the
+narrower band. Prefer re-centring over re-narrowing when the new source is
+qualitative only.
+
 **2026-08-21 update (18:11Z settlement): the Aug14-21 Musk weekly set's
 two >0.10-disagreement legs both settled, both LOST.** 240-259
 (cd3af116ed2a, No side, bid 0.252 vs est 0.16) lost to the actual count
