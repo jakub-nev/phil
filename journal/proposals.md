@@ -4300,3 +4300,10 @@ There are no new hourly proposals since DEEP-10-10.
   Added ask: (4) when the CLOB is unreachable, let forecast.py record with
   null bid/ask plus a flag (score.py already grades against the mid),
   rather than dropping the forecast.
+  **Recurrence 2026-10-30 20:0xZ (FULL tick, pi4), both hosts down:**
+  every gamma-api call failed with `[Errno 101] Network is unreachable`
+  (all 4 scan queries -> 0 candidates; resolve.py failed 7 market fetches
+  at ~1.5 min each and was killed at the 10-minute background limit with
+  no writes), and score.py's CLOB MTM failed too. The cycle could not
+  settle, screen or research. Asks (1) and (3) above still stand: a
+  circuit breaker would have made this a 1-minute tick, not 13 minutes.
