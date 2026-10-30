@@ -9756,3 +9756,14 @@ uninformative mid.
 ## 2026-10-30 00:0xZ: PINS beat WSV row (RETRO-20261030-0000)
 
 - `65ac60c288e9` PINS non-GAAP > 0.49, wide-spread-veto, Yes 0.40 vs mid 0.185 (book 0.06/0.31). Resolved No; CF Yes edge +0.090, -$5.00. The veto was right.
+
+## 2026-10-30 04:0xZ: Iotova 20-30 OVV and SC-rally union WSV rows (RETRO-20261030-0400)
+
+- OVV: `30cc02a3fc59` Iotova R1 margin 20-30% Yes 0.44 vs mid 0.285. Resolved No. CF Yes edge +0.150, -$5.00. The veto was right.
+- WSV: `356cfead2ad8` Trump SC rally "Fentanyl/Deport/Deported" Yes 0.60 vs mid 0.37 (book 0.27/0.47). Resolved No. CF Yes edge +0.130, -$5.00. The veto was right.
+
+RULE (forecast-only, n=1, re-grade at 5): a say-the-word union leg ("X or Y
+or Z") with no own-history base rate for that event format goes in at most
+half the gap above the mid. Calling the words "evergreen rally vocabulary"
+is not a base rate. This row cost +0.223 dBrier. Every leg of that rally
+resolved No, and I could not verify why (RETRO-20261030-0400).
