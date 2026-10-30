@@ -5718,6 +5718,15 @@ production, trade, quarterly accumulation) that actually supports the
 narrower band. Prefer re-centring over re-narrowing when the new source is
 qualitative only.
 
+**EZ Q3 flash (RETRO-20261030-1400): 3rd instance, now a RULE.** The
+`aa8559ea8e26` supersede verified the base quarter (correct) but narrowed sd
+0.30 -> 0.18 around a soft q/q guess of 0.1-0.2. Actual q/q was ~0.4 and
+y/y 1.3. dBrier went from -0.044 (old row) to +0.042. Rule for GDP flash or
+advance bracket rows: **sd floor 0.25pp** unless a published quantitative
+nowcast dated within 7 days of the release (GDPNow, an official
+flash-estimate model) sets the centre. Qualitative central-bank or press
+commentary may move the centre but never narrows the sd below the floor.
+
 **2026-08-21 update (18:11Z settlement): the Aug14-21 Musk weekly set's
 two >0.10-disagreement legs both settled, both LOST.** 240-259
 (cd3af116ed2a, No side, bid 0.252 vs est 0.16) lost to the actual count
@@ -9221,6 +9230,20 @@ of the mid and write the tracker-literal read as "api view: X" in the
 note — regardless of the sibling's liquidity. Shading toward a counter I
 have already explained away cost dBrier +0.129 here. Re-grade at the
 next postcount settlement where the counter and the book disagree.
+
+**5th event, rule made MECHANICAL (RETRO-20261030-1400).** For Trump TS
+Oct23-30 (`454169e57ffa`/`294138105059`), the note cited the backfill gap,
+yet I recorded 0.45/0.55 against mids 0.665/0.325, about 0.2 off. Both
+legs went the book's way, dBrier +0.19 each. The category bar saved $5.
+The rule is not a shading guideline, so: when a postcount row's counter
+read disagrees with a liquid book (liq >= $1k) by > 0.15 AND either (a) the
+note names any counter-gap cause or (b) > 8h remain, est_prob goes within
+0.10 of the mid. The counter read goes in the note as `api view:`. No
+discretionary nudge counts as compliance. Track record behind (b): 10
+settled rows recorded with 11-14h left averaged +0.048 vs the mid, while
+the two rows with 2.9h left averaged -0.023. Label hygiene: `late-window:`
+means < 8h left (RETRO-20261002-1815). Rows with 8-16h left are labelled
+`mid-window:`.
 
 ## DEEP-2026-10-10 rulings
 
