@@ -9866,3 +9866,24 @@ largest Oct 31 at 0.13, with a 2.2% gap and 3.75h left. The model says
 0.04-0.07. Mid was 0.08 and the row resolved No, dBrier +0.010. Tag every
 row in this family `market-cap-rank` (Oct 30-31 rows were split across
 three tags).
+
+Update RETRO-20261031-1200 (n=2): `db9df6583654` Apple largest Oct 31 at
+0.86 vs mid 0.914. It had a 2.2% gap with 3.7h left and used 2.6%/d vol
+plus a "delayed quote" shade. It resolved Yes and lost +0.012 to the mid.
+At 1.5-2%/d the rule gives 0.92-0.97. Both misses so far used vol above
+2%/d and shaded toward 0.5. Do not shade a companiesmarketcap quote under
+~20 min old for delay.
+
+## 2026-10-31 12:0xZ: multi-day mcap-rank OVV row (RETRO-20261031-1200)
+
+| Row | est vs mkt | Side | Realizable edge | Result | CF P&L |
+|---|---|---|---|---|---|
+| Apple #2 Oct 31 (`3d94db75bc23`, OVV) | 0.57/0.685 | No | +0.110 (ask 0.32) | No | **+10.63** |
+
+The veto was wrong this time. A 6-session relative-vol model leaned
+toward an AAPL/NVDA flip, and the flip happened (Apple went to #1). The
+veto stays at n=1. RULE: a scheduled catalyst used to widen sd (here AAPL
+earnings, assumed ~Oct 29 but actually Nov 2) must be confirmed with a
+dated source, or left out. Mechanical outside-view-veto line, including
+this row: 273 settled declined, 265 fillable, 195 events, 112W/153L,
++$229.70, brier_delta +0.0233, held-out +$234.62.
