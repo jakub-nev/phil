@@ -9923,3 +9923,16 @@ I diluted the discount as more mainstream polls arrived. Those polls share the
 house bias the prior corrects, so piling them up is not new evidence against
 the prior. Tally only. Re-grade when a second election tests a validated
 pollster-bias prior.
+
+## 2026-10-31 20:0xZ: PMO odds-leader lean needs a measured flip rate (RETRO-20261031-2000)
+
+PMO 2028 Dem leader, Oct 31 (Newsom won), 8 rows, family net dB -0.106 vs
+mid. The 02Z rows leaned with a 0.2pp Ossoff lead 14h out (0.52/0.40), with
+the note saying "hourly noise unmeasured". They lost -0.142 to a near-even
+mid. The 10Z rows (0.3pp Newsom lead, 6h out, 0.53) beat it by +0.098.
+RULE (same discipline as the 2026-09-25 resolver-series rule): on a PMO
+odds-leader market, a lean of more than 0.05 off an even split between tied
+leaders (gap within the observed hourly flip range) needs the hourly flip
+rate measured from latest.json history and cited in the note. Otherwise
+record the even split and write the lean as "lean view: X". n=1 event;
+forecast-only, and the category bar is unchanged.
