@@ -9840,6 +9840,14 @@ a sign of a contested No. RULE: a leg that is merely late to resolve gives no
 evidence for No. Inside an active campaign, record at or above the mid unless
 a ceasefire or pause is actually reported.
 
+Update RETRO-20261031-1400 (n=4): Oct 30 settled Yes about 9h after its
+window closed. Two rows: the original `b86a65339638` at 0.58 vs mid 0.62 lost
++0.032 to the mid, and the at-mid re-read `940aa3c62b77` at 0.82 vs mid 0.8225
+tied the mid (+0.001). Tally is now 4/4 Yes. The at-mid rule held. At the
+n=5 re-grade, decide whether "at or above the mid" should become "above the
+mid" (a family at 4/4 is still too small for that). Recording below the mid
+has lost all three times it was tried.
+
 ## 2026-10-30 00:0xZ: PINS beat WSV row (RETRO-20261030-0000)
 
 - `65ac60c288e9` PINS non-GAAP > 0.49, wide-spread-veto, Yes 0.40 vs mid 0.185 (book 0.06/0.31). Resolved No; CF Yes edge +0.090, -$5.00. The veto was right.
