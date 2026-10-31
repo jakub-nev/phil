@@ -9831,6 +9831,15 @@ settled Yes 2/2 (Sep 23, Oct 5). Record from the campaign's daily base
 rate, not a 0.50 coin flip. This row's 0.50 lost +0.052 to an
 uninformative mid.
 
+Update RETRO-20261031-0000 (n=3): `4f09eff38139` Oct 23 Yes, recorded at
+0.64 vs mid 0.70. It settled Yes 7 days late, and this row lost -0.040 to the
+mid. Tally is now 3/3 Yes. The 0.06 haircut below the mid rested on "sibling
+dates sit unresolved at 0.5-0.75". That was a misreading: slow settlement is
+how this family normally resolves (Sep 23 took 36 days, Oct 23 took 7), not
+a sign of a contested No. RULE: a leg that is merely late to resolve gives no
+evidence for No. Inside an active campaign, record at or above the mid unless
+a ceasefire or pause is actually reported.
+
 ## 2026-10-30 00:0xZ: PINS beat WSV row (RETRO-20261030-0000)
 
 - `65ac60c288e9` PINS non-GAAP > 0.49, wide-spread-veto, Yes 0.40 vs mid 0.185 (book 0.06/0.31). Resolved No; CF Yes edge +0.090, -$5.00. The veto was right.
