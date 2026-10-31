@@ -9895,3 +9895,31 @@ earnings, assumed ~Oct 29 but actually Nov 2) must be confirmed with a
 dated source, or left out. Mechanical outside-view-veto line, including
 this row: 273 settled declined, 265 fillable, 195 events, 112W/153L,
 +$229.70, brier_delta +0.0233, held-out +$234.62.
+
+## 2026-10-31 18:0xZ: AAA pre-print rule re-graded at 6 events; Israel polling prior (RETRO-20261031-1800)
+
+**AAA pre-print rule, event #6 (Oct 31), the scheduled re-grade.** The print was
+4.1837 (-2.09c). Realized |moves| over the 6 events: 0.73, 2.25, <0.75, >=0.58,
+>=1.71, 2.09c. Two of six exceed 2c.
+- **Concentrated branch is now STANDING (no longer provisional).** When the top bin is
+  >= 0.85, the book has been right 4/4 times. Every row I recorded off the mid lost.
+  This event, `44034bad7cf5` was recorded at 0.68 OVV vs mid 0.925 on an N(-1.9, 0.6c)
+  model. That broke the rule outright and lost +0.097. Record within 0.05 of the mid,
+  `market-agrees`, with no exceptions for "the move looks thin-volume".
+- **Diffuse branch: the sd floor is now mechanical.** A row whose note cites sd < 1c
+  is invalid. Re-record it at mid +/- half the model gap, tagged `unvalidated-method`.
+  `8df8a6b02250` used 0.7c (the second sub-floor case, after Oct 25) and lost +0.098.
+  The branch stays because Oct 25's WSV row would have paid +$8.51. Re-grade again at 10
+  events.
+
+Documented exclusions (the hand table stays frozen):
+- OVV: `44034bad7cf5` AAA Oct 31 4.18-4.1899, Yes 0.68 vs mid 0.925. Yes won; CF No @0.09 -$5.00. The veto was right.
+- WSV: `011f87fb9c2f` AAA Oct 31 4.19-4.1999, Yes 0.40 vs mid 0.35 (book 0.01/0.69). No won; no fillable edge either side, CF $0.
+
+**Israel Oct 27 most-seats tally (n=1, forecast-only).** Likud won most seats.
+All 5 rows (Yashar 0.55/0.60/0.65, Likud 0.42/0.37) beat the mid, net -0.220, by
+keeping a "Likud meets/beats final polls" discount against a book led by mainstream polls.
+I diluted the discount as more mainstream polls arrived. Those polls share the
+house bias the prior corrects, so piling them up is not new evidence against
+the prior. Tally only. Re-grade when a second election tests a validated
+pollster-bias prior.
