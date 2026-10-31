@@ -9854,3 +9854,15 @@ or Z") with no own-history base rate for that event format goes in at most
 half the gap above the mid. Calling the words "evergreen rally vocabulary"
 is not a base rate. This row cost +0.223 dBrier. Every leg of that rally
 resolved No, and I could not verify why (RETRO-20261030-0400).
+
+## 2026-10-31 06:0xZ: final-session market-cap-rank crossing (RETRO-20261031-0600)
+
+RULE (forecast-only, n=1, re-grade at 5): for a same-day "largest / Nth-largest
+by market cap" leg priced during the deciding session, P(cross) comes from
+z = gap / (rel_vol_daily * sqrt(hours_left / 6.5)), with pairwise mega-cap
+relative vol of about 1.5-2%/day. Add no extra event tail unless a scheduled
+catalyst falls inside the remaining window. Evidence: `b18f17af0cfa` NVDA
+largest Oct 31 at 0.13, with a 2.2% gap and 3.75h left. The model says
+0.04-0.07. Mid was 0.08 and the row resolved No, dBrier +0.010. Tag every
+row in this family `market-cap-rank` (Oct 30-31 rows were split across
+three tags).
