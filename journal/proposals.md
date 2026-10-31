@@ -4307,3 +4307,14 @@ There are no new hourly proposals since DEEP-10-10.
   no writes), and score.py's CLOB MTM failed too. The cycle could not
   settle, screen or research. Asks (1) and (3) above still stand: a
   circuit breaker would have made this a 1-minute tick, not 13 minutes.
+  **Recurrence 2026-10-31, twice (FULL ticks 16:25Z and 20:2xZ, pi4),
+  CLOB only:** gamma-api answered both times (scan 1019 candidates at 20:05Z,
+  mkt.py and siblings.py ok), but `clob.polymarket.com/book` failed with
+  Errno 101. At 20:2xZ, 4 researched rows were lost: Hormuz >=10 5166734
+  0.06, Mandeb 25-29 5166819 0.61 (supersede of 0.45), Mandeb 30-34
+  5166820 0.34 (supersede of 0.24), USGS M5.5+ = 13 6090730 0.28. Score.py
+  MTM was also unavailable, and the score run took >2 min on CLOB retries.
+  The pattern is the same as 10-28 (gamma ok, CLOB down) and has now hit 3
+  FULL ticks in 4 days. Ask (4), a mid-only forecast fallback, is the cheap
+  fix for the calibration channel. Ask (3), the routing check, is the
+  real fix.
