@@ -9848,6 +9848,21 @@ n=5 re-grade, decide whether "at or above the mid" should become "above the
 mid" (a family at 4/4 is still too small for that). Recording below the mid
 has lost all three times it was tried.
 
+Update RETRO-20261031-2200 (n=5, the pre-registered re-grade): Oct 6
+settled Yes about 25 days late. Rows `488609de0812` 0.68 vs 0.795 and
+`dfd46d67ea74` 0.72 vs 0.87 (doubt about who struck; a thin sibling used as
+the benchmark) lost +0.060 and +0.062 to the mid. `e9b8fa882a88` 0.90 vs
+0.74, which cited the dated "Yemen Dawn" offensive of Oct 4 and the
+coalition's own strike claims for Oct 5, beat the mid by -0.058. Tally 5/5
+Yes. Below-mid rows are 0/5. RULING: "above the mid" does NOT become the
+default (5/5 at mids near 0.75 has p of about 0.2, and the days come from
+one correlated campaign). RULE: (a) never record below the mid inside an
+active campaign unless a ceasefire or pause is reported. Doubt about
+Saudi-vs-PLC attribution is not grounds. (b) Above the mid only on a dated
+strike or offensive report for the target day or the day before it, cited
+in the note. Tag all rows in this family `geopolitics-military`. Re-grade
+at n=8.
+
 ## 2026-10-30 00:0xZ: PINS beat WSV row (RETRO-20261030-0000)
 
 - `65ac60c288e9` PINS non-GAAP > 0.49, wide-spread-veto, Yes 0.40 vs mid 0.185 (book 0.06/0.31). Resolved No; CF Yes edge +0.090, -$5.00. The veto was right.
