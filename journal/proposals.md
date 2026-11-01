@@ -4328,3 +4328,12 @@ There are no new hourly proposals since DEEP-10-10.
   Nov 1 resolution and USGS Oct26-Nov1 counts all land today. That is the
   6th outage on pi4 in 10 days. Asks (1) circuit breaker and (3) routing
   check still stand.
+  **Recurrence 2026-11-01 20:0x-20:3xZ (FULL tick, pi4), flapping:**
+  `core/resolve.py` (20:01Z) failed 5 gamma fetches with Errno 101 and hit
+  the 10-minute limit; a scan ~20:13Z then succeeded (1035 candidates) and
+  a resolve retry finished cleanly (0/69). The CLOB stayed down for the
+  whole tick: score.py MTM unavailable on both open positions, and
+  `core/forecast.py record` failed twice on `pmapi.best_prices`, so 2
+  researched rows were lost (Trump Dubuque rally 'Crazy' 7+ 6477425 0.80,
+  'Maduro' 6477437 0.66). 7th outage in 11 days, the 4th CLOB-only one.
+  Ask (4) (mid-only forecast fallback) would have saved both rows.
