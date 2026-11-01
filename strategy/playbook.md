@@ -9951,3 +9951,19 @@ leaders (gap within the observed hourly flip range) needs the hourly flip
 rate measured from latest.json history and cited in the note. Otherwise
 record the even split and write the lean as "lean view: X". n=1 event;
 forecast-only, and the category bar is unchanged.
+
+## 2026-11-01 04:0xZ: Rhine Kaub threshold-touch OVV row (RETRO-20261101-0400)
+
+| Row | est vs mkt | Side | Realizable edge | Result | CF P&L |
+|---|---|---|---|---|---|
+| Rhine normal levels Oct (`f51e0aa5e34c`, OVV) | 0.72/0.875 | No | +0.140 (ask 0.14) | No | **+30.71** |
+
+The veto was wrong this time. The BfG 4-day path reached Kaub 77cm only at
+its last column, and the river never got there. RULE (forecast-only, n=1,
+re-grade at 3 river-level events): when an official deterministic
+hydro/forecast path reaches the threshold only at its final horizon, record
+the touch at 0.5-0.65. Do not record it at the book's near-certainty or at
+"path touches = Yes". The first-contact OVV gate is unchanged. Mechanical
+outside-view-veto line, including this row: 277 settled declined, 269
+fillable, 198 events, 114W/155L, +$252.00, brier_delta +0.0224, held-out
++$256.13.
