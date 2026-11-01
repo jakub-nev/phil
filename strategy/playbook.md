@@ -9967,3 +9967,17 @@ the touch at 0.5-0.65. Do not record it at the book's near-certainty or at
 outside-view-veto line, including this row: 277 settled declined, 269
 fillable, 198 events, 114W/155L, +$252.00, brier_delta +0.0224, held-out
 +$256.13.
+
+## 2026-11-01 08:0xZ: token-launch deadline legs need a dated TGE (RETRO-20261101-0800)
+
+RULE (forecast-only, n=1, re-grade at 3 launch events): on a "launch a token
+by DATE" leg, pre-TGE sales, tokenomics posts and perp listings are not a TGE
+date. Inside the last 72h, going above 0.5 needs a dated official TGE or claim
+announcement, or a vote result, inside the window, cited in the note. Without
+one, record at or below the mid and write "no dated TGE". If a schedule or vote
+puts the earliest TGE outside the window, record <= 0.10. Search for "TGE date"
+or "vote", not just launch news. Evidence: Predict.fun Oct 31 (market 5407574)
+went in at 0.86/0.80/0.70 on a "Binance pre-TGE sale lists in 1-2 days"
+heuristic. It resolved No, and a community vote had offered Nov 1 or Dec 1.
+
+- WSV: `29db50ebd976` France Moody's/S&P downgrade by Oct 31, Yes 0.03 vs placeholder mid 0.48 (book 0.08/0.88). No won; CF No @0.919 edge +0.052, +$0.45. A negligible cost. Wide-spread-veto mechanical line: 112 settled, 96 fillable, 46W/50L, -$87.89, held-out -$62.49.
