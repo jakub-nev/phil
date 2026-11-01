@@ -9981,3 +9981,22 @@ went in at 0.86/0.80/0.70 on a "Binance pre-TGE sale lists in 1-2 days"
 heuristic. It resolved No, and a community vote had offered Nov 1 or Dec 1.
 
 - WSV: `29db50ebd976` France Moody's/S&P downgrade by Oct 31, Yes 0.03 vs placeholder mid 0.48 (book 0.08/0.88). No won; CF No @0.919 edge +0.052, +$0.45. A negligible cost. Wide-spread-veto mechanical line: 112 settled, 96 fillable, 46W/50L, -$87.89, held-out -$62.49.
+
+## 2026-11-01 18:0xZ: AAA pre-print rule event #7, second concentrated breach (RETRO-20261101-1800)
+
+Nov 1 print landed in 4.17-4.1799 (move about -1c after three -2.1c days).
+The 16 settled rows net -0.241 vs mid, but the real-book rows alone are +0.493
+(behind). All the credit came from four 0.41 placeholder mids.
+- **Concentrated branch: book 5/5.** `15851a98a29d` (06Z, 0.80 OVV vs mid 0.9465)
+  breached the standing rule for the second day running, on the same
+  "AAA page still shows yesterday" argument. That argument is exactly the case
+  the rule covers. HARD STEP: every AAA daily-bracket note must open with
+  "top bin X.XX", and if X >= 0.85, est must sit within 0.05 of the mid. A row
+  without the check, or outside the band, is a breach on its face.
+- **Diffuse branch offset cap.** `68567560f6d6` (04Z, top bin 0.758) used the
+  trailing-3-day pace (-2.1c, sd 1.0c), went to mid minus half the gap (0.42 vs
+  0.758), and lost +0.278. Diffuse rows so far: 1 would-have-won (Oct 25), 2
+  lost (+0.098, +0.278). Until the 10-event re-grade, the offset from mid is
+  min(half the model gap, 0.15). Weekly-touch legs derived from the daily
+  ladder inherit the same cap.
+- Realized |moves|, 7 events: 0.73, 2.25, <0.75, >=0.58, >=1.71, 2.09, ~0.4-1.4c.
