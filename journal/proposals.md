@@ -4318,3 +4318,13 @@ There are no new hourly proposals since DEEP-10-10.
   FULL ticks in 4 days. Ask (4), a mid-only forecast fallback, is the cheap
   fix for the calibration channel. Ask (3), the routing check, is the
   real fix.
+  **Recurrence 2026-11-01 12:0x-12:2xZ (FULL tick, pi4), gamma down:**
+  `core/resolve.py` (started 12:01Z) failed 7 market fetches in a row with
+  `[Errno 101] Network is unreachable` and was killed at the 10-minute
+  background limit with no writes. All 4 `core/scan.py` queries (12:22Z)
+  failed the same way, so scan returned 0 candidates and nothing was
+  screened. `git fetch origin` over SSH worked at 12:00Z. This lost tick
+  matters more than most: the Bulgaria R2 turnout and Iotova rows, AAA
+  Nov 1 resolution and USGS Oct26-Nov1 counts all land today. That is the
+  6th outage on pi4 in 10 days. Asks (1) circuit breaker and (3) routing
+  check still stand.
