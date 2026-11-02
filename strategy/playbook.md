@@ -10000,3 +10000,8 @@ The 16 settled rows net -0.241 vs mid, but the real-book rows alone are +0.493
   min(half the model gap, 0.15). Weekly-touch legs derived from the daily
   ladder inherit the same cap.
 - Realized |moves|, 7 events: 0.73, 2.25, <0.75, >=0.58, >=1.71, 2.09, ~0.4-1.4c.
+
+Documented exclusions (backfilled 2026-11-02 00:0xZ FULL; reconcile.py flagged
+them untabled since the 17:01Z settlement; the hand table stays frozen):
+- OVV: `71367cdf22af` AAA weekly low <=4.16 wk Oct 26, Yes 0.25 vs mid 0.06 (book 0.03/0.09). Nov 1 printed 4.17-4.1799, No won; CF Yes @0.09 -$5.00. The veto was right; the superseding no-edge row `d7f3d78c0db2` (0.18) also lost vs the mid.
+- WSV: `a28143ea5306` / `90b9e807c500` / `cf369c76d34c` AAA weekly low <=4.12 / 4.10 / 4.08, Yes 0.02/0.01/0.01 vs placeholder mid 0.41 (books 0.01/0.81-0.88, liq $4-9). No won; No ask ~0.99, no fillable edge, CF $0 each. Empty-book credit, not edge (RETRO-20261024-2200).
