@@ -9882,6 +9882,22 @@ strike or offensive report for the target day or the day before it, cited
 in the note. Tag all rows in this family `geopolitics-military`. Re-grade
 at n=8.
 
+Update RETRO-20261102-2000 (n=7 settled dates): Oct 12 settled Yes about 21
+days late. Tally 7/7 Yes. Both rows sat above the mid on dated offensive
+reports (rule (b) compliant): `4b2c84b44dbc` 0.80 vs 0.57 (-0.145) and
+`8c8ac8c28eaa` 0.85 vs 0.585 (-0.150, cited the AP Oct 5 "Yemen Dawn"
+report). Above the mid is now 5/5 (4 beat the mid, 1 tie). Below the mid is
+still 0/5. Documented WSV exclusions (hand table frozen): `4b2c84b44dbc` Yes
+@0.66, edge +0.14, +$2.58; `8c8ac8c28eaa` Yes @0.64, edge +0.21, +$2.81.
+That is +$5.39 forgone. Unlike Oct 8, these vetoes refused real edge.
+Across the family, WSV has now forgone +$7.92 on 4 rows. The ledger-wide WSV
+line is still -$84.97 on 101 fillable trades, so the veto stays. Pre-registered for
+the n=8 re-grade: decide whether declared-campaign single-day legs get a
+family-scoped max_spread exception in risk.json (ask-edge >= 0.10, the
+family stake cap, and rule (b) evidence required). Cite this +$7.92 and the
+one-correlated-regime caveat, and write the decision before reading the
+eighth leg's outcome.
+
 ## 2026-10-30 00:0xZ: PINS beat WSV row (RETRO-20261030-0000)
 
 - `65ac60c288e9` PINS non-GAAP > 0.49, wide-spread-veto, Yes 0.40 vs mid 0.185 (book 0.06/0.31). Resolved No; CF Yes edge +0.090, -$5.00. The veto was right.
