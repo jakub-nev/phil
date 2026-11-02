@@ -4337,3 +4337,10 @@ There are no new hourly proposals since DEEP-10-10.
   researched rows were lost (Trump Dubuque rally 'Crazy' 7+ 6477425 0.80,
   'Maduro' 6477437 0.66). 7th outage in 11 days, the 4th CLOB-only one.
   Ask (4) (mid-only forecast fallback) would have saved both rows.
+  **Recurrence 2026-11-02 10:0x-10:2xZ (FULL tick, pi4), gamma down:**
+  `core/resolve.py` (10:01Z) failed 7 gamma fetches with Errno 101 and was
+  killed at the 10-minute limit with no writes; a 4-minute retry at ~10:18Z
+  also produced nothing. `git fetch origin` worked at 10:00Z and 10:13Z.
+  Scan/research not attempted. Whole FULL tick lost, 8th outage in 12 days.
+  Asks (1) circuit breaker and (3) routing check still stand; with (1),
+  resolve would have failed in seconds and left the tick its time budget.
