@@ -10019,6 +10019,9 @@ The 16 settled rows net -0.241 vs mid, but the real-book rows alone are +0.493
   min(half the model gap, 0.15). Weekly-touch legs derived from the daily
   ladder inherit the same cap.
 - Realized |moves|, 7 events: 0.73, 2.25, <0.75, >=0.58, >=1.71, 2.09, ~0.4-1.4c.
+- Event #8 (Nov 2, RETRO-20261102-1800): printed 4.16-4.1699 (move -0.33..-1.32c).
+  The concentrated branch was HARD STEP compliant (top bin 0.895, est 0.86) and net -0.014 vs mid, so the book is 6/6.
+  The diffuse 16Z model N(-1.2c, 1.1c) put its mode on the winning bin. Its +0.122 is placeholder-mid credit only.
 
 Documented exclusions (backfilled 2026-11-02 00:0xZ FULL; reconcile.py flagged
 them untabled since the 17:01Z settlement; the hand table stays frozen):
