@@ -10005,3 +10005,18 @@ Documented exclusions (backfilled 2026-11-02 00:0xZ FULL; reconcile.py flagged
 them untabled since the 17:01Z settlement; the hand table stays frozen):
 - OVV: `71367cdf22af` AAA weekly low <=4.16 wk Oct 26, Yes 0.25 vs mid 0.06 (book 0.03/0.09). Nov 1 printed 4.17-4.1799, No won; CF Yes @0.09 -$5.00. The veto was right; the superseding no-edge row `d7f3d78c0db2` (0.18) also lost vs the mid.
 - WSV: `a28143ea5306` / `90b9e807c500` / `cf369c76d34c` AAA weekly low <=4.12 / 4.10 / 4.08, Yes 0.02/0.01/0.01 vs placeholder mid 0.41 (books 0.01/0.81-0.88, liq $4-9). No won; No ask ~0.99, no fillable edge, CF $0 each. Empty-book credit, not edge (RETRO-20261024-2200).
+
+## 2026-11-02 06:0xZ: election-day intraday tight-book rule (RETRO-20261102-0603)
+
+On polling day, before an official partial count or a published exit poll,
+if the market's book has spread <= 0.02, the estimate must sit within 0.05 of
+the mid. The only exception is a cited hard dated data point: official
+turnout by hour, an official partial count, or an exit poll. Soft inputs do
+not qualify: endorsements, prior-round poll misses, or "turnout looks flat"
+reads of a morning figure. A note that moves further from the mid without
+naming the data point is a breach on its face. This is the same shape as the
+AAA concentrated-branch HARD STEP: a tight same-day book carries flow I can't see.
+Evidence: Bulgaria R2 `ee54e38590d7` Iotova 0.72 vs a tight 0.80/0.81 on
+soft inputs; Yes won, +0.042 vs mid. Turnout `c2ebd08676d8` 0.42 vs 0.67/0.75
+was reversed to 0.87 four hours later and is pending. Re-grade at the next
+deep retro.
