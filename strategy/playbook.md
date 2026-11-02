@@ -9848,6 +9848,25 @@ n=5 re-grade, decide whether "at or above the mid" should become "above the
 mid" (a family at 4/4 is still too small for that). Recording below the mid
 has lost all three times it was tried.
 
+Re-grade RETRO-20261102-1600 (n=5): the Oct 8 leg settled Yes about 25 days
+late. Tally is now 5/5 Yes. Both Oct 8 rows were recorded from the campaign
+base rate, well above an empty-book mid: `4e194e0b42dd` 0.82 vs 0.43 (-0.293)
+and `32c88a71ebd8` 0.90 vs 0.54 (-0.202). By placement: below the mid 0/3,
+at the mid 1 tie, above the mid 2/2. RULE (forecast-only), effective now:
+inside an active declared campaign with no reported ceasefire or pause, a
+single-day leg on a THIN book (liq < ~$500 or spread >= 0.20) is recorded
+from the campaign base rate (~0.85-0.90 at 5/5), whatever the mid says. On a
+tight liquid book, at-the-mid remains the floor. The bet path is unchanged
+(WSV/OVV still bind; this is one correlated regime). Re-grade at n=10, or at
+the first No.
+
+Documented WSV exclusions (hand table frozen; CF $5 flat via
+`counterfactual.py ledger --rows --skip-reason wide-spread-veto`):
+- `4e194e0b42dd` Yes @0.76, edge +0.06, +$1.58; `32c88a71ebd8` Yes @0.84,
+  edge +0.06, +$0.95. Net +$2.53 forgone. Arithmetically correct vetoes (the
+  thin edge after crossing). Ledger WSV line: 99 fillable, 48W/51L, -$90.36,
+  dBrier -0.0130.
+
 Update RETRO-20261031-2200 (n=5, the pre-registered re-grade): Oct 6
 settled Yes about 25 days late. Rows `488609de0812` 0.68 vs 0.795 and
 `dfd46d67ea74` 0.72 vs 0.87 (doubt about who struck; a thin sibling used as
