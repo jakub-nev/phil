@@ -10064,10 +10064,15 @@ The 16 settled rows net -0.241 vs mid, but the real-book rows alone are +0.493
   lost (+0.098, +0.278). Until the 10-event re-grade, the offset from mid is
   min(half the model gap, 0.15). Weekly-touch legs derived from the daily
   ladder inherit the same cap.
-- Realized |moves|, 7 events: 0.73, 2.25, <0.75, >=0.58, >=1.71, 2.09, ~0.4-1.4c.
+- Realized |moves|, 9 events: 0.73, 2.25, <0.75, >=0.58, >=1.71, 2.09, ~0.4-1.4, 0.33-1.32, 2.01c.
 - Event #8 (Nov 2, RETRO-20261102-1800): printed 4.16-4.1699 (move -0.33..-1.32c).
   The concentrated branch was HARD STEP compliant (top bin 0.895, est 0.86) and net -0.014 vs mid, so the book is 6/6.
   The diffuse 16Z model N(-1.2c, 1.1c) put its mode on the winning bin. Its +0.122 is placeholder-mid credit only.
+- Event #9 (Nov 3, RETRO-20261103-1800): printed 4.1493 (move -2.01c). The 20Z
+  diffuse model N(-0.8c, 0.8c) assumed deceleration and gave <4.15 only 0.08.
+  Its 4.15 row beat the mid (-0.200) only via the 0.15 offset cap; the 4.16 row
+  lost (+0.090). **Diffuse-branch sigma floor: 1.2c** (about the RMS of the
+  realized moves above) until the 10-event re-grade at event #10.
 
 Documented exclusions (backfilled 2026-11-02 00:0xZ FULL; reconcile.py flagged
 them untabled since the 17:01Z settlement; the hand table stays frozen):
@@ -10088,3 +10093,14 @@ Evidence: Bulgaria R2 `ee54e38590d7` Iotova 0.72 vs a tight 0.80/0.81 on
 soft inputs; Yes won, +0.042 vs mid. Turnout `c2ebd08676d8` 0.42 vs 0.67/0.75
 was reversed to 0.87 four hours later and is pending. Re-grade at the next
 deep retro.
+
+**Turnout-threshold pre-afternoon cap (RETRO-20261103-1800, n=1 event).**
+For a turnout >= X leg, until the mid-afternoon official turnout read (CIK
+16:00 local or equivalent), the estimate stays within 0.15 of the mid,
+whatever the spread. Neither a morning hourly figure nor a historical
+round-to-round base rate justifies more. Evidence: Bulgaria R2 >= 24%
+resolved Yes. OVV `d5eb5a3eca35` 0.58 (R1->R2 decline base rate, 5 of 6
+runoffs) went +0.128 vs mid. WSV `c2ebd08676d8` 0.42 (11:00 hourly roughly
+flat vs R1) went +0.252, and a +2.3pp afternoon surge reversed it. Both
+vetoes saved $5. A record-low first round is the anomaly that mean-reverts, so
+the base rate from normal rounds does not apply.
