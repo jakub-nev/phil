@@ -9810,6 +9810,19 @@ probability is not evidence for a below-mid record. Only a dated
 data print after the swaps read can move a leg off the mid. Forecast-
 only rule (no bet path changes). Re-grade at n=5 ladders.
 
+Re-graded at n=5 (RETRO-20261103-0600, RBA Nov 3 +25bp): 5 of 5 ladders
+(BanRep, RBI, BoI, BoC, RBA) carry the same sign. Below-mid modal records
+lost to the market (RBA 250fe41a4d7f 0.57 vs 0.674, +0.079), and so did an
+above-mid hold record (f1928b996014 0.15 vs 0.108, +0.011). The rule is
+CONFIRMED and has two extensions:
+(a) secondary press reports of futures/OIS odds that are older than the
+live PM book are not a "numeric survey". If the PM mid already sits above
+the reported odds, the book is the fresher read and the modal leg goes at
+or above it.
+(b) a sibling-consistency recompute (1 - other legs) never moves the modal
+leg below its own mid. When the books' mids don't sum to 1, record the
+modal leg at its mid (0ce0dec2e5ea 0.88 vs 0.912 slipped this way).
+
 Documented exclusions (reconcile.py flagged at 16:00Z; Brazil R2 Oct 25,
 OVV rows from 2026-09-21, settled 10-26; CF $5 flat via
 `counterfactual.py ledger --rows --skip-reason outside-view-veto`):
