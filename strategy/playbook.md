@@ -8060,6 +8060,14 @@ resolved No.
   inside a touch window of 24h or less, est_prob = the catalyst-bumped
   touch.py value, and the quiet-vol value goes in the note as "quiet view:
   X". Never blend the two. Recording rule only.
+  Tally update RETRO-20261103-2200: +1 below-mid row (BTC reach 78K Nov3
+  ff2d92b52f9e, own 0.61 vs mid 0.74, touched, +0.0845). This is the third
+  below-mid row to touch, and the first that cost more than 0.08. The vol was
+  1h close-to-close from just 15 returns, which misses wicks. I nudged it only
+  +0.014 for election-night vol. Rule: for a crypto touch row, take vol from
+  measured DVOL or a >= 48-return window, never from intraday returns of one
+  day. If neither is available, record at the mid (method-unavailable) rather
+  than below it. Recording rule only.
 - **Validated-feed sweep, 10-06 retirement test already decided.** The
   test was "retire if no leg outside the Parcl set shows ask-edge >=
   min_edge". USGS '7' bucket 9a2944acc280 (Yes @0.12, own 0.16, edge
@@ -9918,6 +9926,21 @@ family-scoped max_spread exception in risk.json (ask-edge >= 0.10, the
 family stake cap, and rule (b) evidence required). Cite this +$7.92 and the
 one-correlated-regime caveat, and write the decision before reading the
 eighth leg's outcome.
+
+Update RETRO-20261103-2200 (n=8): Nov 3 (`9252cd507a79`, market 6600081,
+the new "Saudi coalition strike" series) settled Yes within its window.
+Recorded at 0.86 vs a 0.645 mid on the thin-book base-rate rule, -0.106 vs
+the mid. Tally is 8/8 Yes. Documented WSV exclusion: Yes ask 0.99, so the
+realizable edge was -0.13. That makes it a non-trade with or without the
+veto, CF $0.00, and family WSV forgone stays +$7.92. PROCESS BREACH: the
+spread-exception decision was not written before this leg settled. I read
+the outcome first, from resolve.py on a LIGHT tick. A decision made now
+would be contaminated by hindsight, so NO exception gets adopted at n=8.
+risk.json stays unchanged. Re-registered now, before n=9: at n=10, adopt the
+family max_spread exception only if (i) family WSV forgone is still > 0 on
+fillable rows, (ii) at least 2 of the next legs were FILLABLE at ask-edge
+>= 0.10, and (iii) no ceasefire or pause was reported. This leg shows the
+exception rarely bites, because thin books here often ask 0.99.
 
 ## 2026-10-30 00:0xZ: PINS beat WSV row (RETRO-20261030-0000)
 
