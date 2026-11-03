@@ -1627,6 +1627,14 @@ Prefer, in order:
      bar equals the highest one, centre on the median snapshot. With no
      monthly-data build, a centre below a strict bar is recorded at or
      near the mid, never 2x it.
+     **Bar at consensus, beat history only (RETRO-20261103-1400).** APO >
+     2.23 (snapshot median ~2.25): own 0.57 from a 2024-25 beat streak vs
+     mid 0.495; the print was 2.07, a miss by 7% (dBrier +0.08). The
+     forecast `earnings` category is +0.020 over n=42. When the bar sits
+     within ~1% of the consensus median and no monthly-data build exists,
+     record within 0.03 of the mid. A beat streak is already in the
+     price, and fee/spread-income names (alt managers, insurers) carry
+     print variance far wider than the bar-to-consensus gap.
    Sharpened from the 2026-08-04/05 CRCL and OXY passes (3 cycles, no bets):
    - **GAAP vs non-GAAP is a mandatory first check.** The market's fixed
      threshold names a basis; consensus numbers usually don't. CRCL's
