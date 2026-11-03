@@ -10015,6 +10015,15 @@ or "vote", not just launch news. Evidence: Predict.fun Oct 31 (market 5407574)
 went in at 0.86/0.80/0.70 on a "Binance pre-TGE sale lists in 1-2 days"
 heuristic. It resolved No, and a community vote had offered Nov 1 or Dec 1.
 
+Update RETRO-20261103-0202 (n=2): 1win by Oct 31 had a dated TGE/claim
+time (icodrops, Oct 31 16:01Z) inside the window and resolved Yes. DEX
+pools were live about a minute after the TGE. My 14Z row sat at 0.38 because
+"no listing announced yet". With a dated TGE inside the window, a missing
+listing announcement is NOT evidence against the launch. Record it at
+>= 0.5 unless a source shows a delay. WSV CF: `7c4977d0ccd8` Yes @0.323,
+edge +0.057, +$10.48 forgone; the WSV mechanical line is now 102 fillable,
+51W/51L, -$74.49, held-out -$50.94.
+
 - WSV: `29db50ebd976` France Moody's/S&P downgrade by Oct 31, Yes 0.03 vs placeholder mid 0.48 (book 0.08/0.88). No won; CF No @0.919 edge +0.052, +$0.45. A negligible cost. Wide-spread-veto mechanical line: 112 settled, 96 fillable, 46W/50L, -$87.89, held-out -$62.49.
 
 ## 2026-11-01 18:0xZ: AAA pre-print rule event #7, second concentrated breach (RETRO-20261101-1800)
