@@ -1675,6 +1675,15 @@ Prefer, in order:
      metrics read, guidance). IBKR: threshold 0.70 vs consensus 0.67,
      recorded 0.45 vs 0.325 mid on Q2's beat. It printed 0.67 and resolved
      No. Evidence n=1, re-grade at n=5.
+   - **GAAP threshold above the non-GAAP guide = a bet on investment marks
+     (RETRO-20261104-1400, UBER `6281131`).** When the GAAP bar sits above
+     the company's own non-GAAP guide, the consensus has a mark-to-market
+     gain baked in (equity stakes, tax items). Those swing both ways and
+     are not researchable before the print, so keep the estimate within
+     0.05 of the mid unless a dated source shows what the stakes did in
+     the quarter. UBER: recorded 0.38 vs mid 0.285 on that reasoning. GAAP
+     EPS printed 0.25 vs a 0.98 bar after a $476M revaluation loss.
+     Evidence n=1, re-grade at n=5.
    - **"Consensus clears the threshold" is not an edge when PM already
      prices it ≥~0.80** (CRCL 0.845, OXY 0.91): the market has the same
      consensus. The tradeable shapes are (i) PM price *contradicting* the
