@@ -4353,3 +4353,14 @@ There are no new hourly proposals since DEEP-10-10.
   Python; `git fetch origin` worked at 18:00Z and 18:13Z. Scan/research
   not attempted. 9th outage in 14 days, the whole FULL tick lost again.
   Ask (1) circuit breaker unchanged.
+  **Recurrence 2026-11-04 20:0x-20:5xZ (FULL tick, pi4), CLOB-only:**
+  gamma was fine (resolve settled 3 forecasts, scan returned 1104, mkt.py
+  worked), but `clob.polymarket.com/book` returned Errno 101 / timeouts on
+  every call from ~20:30Z (quote.py via both urllib and curl). score.py ran
+  for more than 2 min, and `core/forecast.py record` failed on
+  `pmapi.best_prices` for all 5 researched rows: WH lid 6568170 0.25 OVV,
+  Joburg 2486554 0.50, VIRT 6639335 0.50, TRIP 6639257 0.62, NZ Greens
+  2117404 0.88. Two of these (VIRT and TRIP) resolve before a later tick can
+  record them. That is the 10th outage in 14 days and the 5th CLOB-only one.
+  Ask (4), a forecast fallback to gamma bestBid/bestAsk flagged
+  `quote_source: gamma`, would have saved all 5 rows.
