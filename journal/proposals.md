@@ -4344,3 +4344,12 @@ There are no new hourly proposals since DEEP-10-10.
   Scan/research not attempted. Whole FULL tick lost, 8th outage in 12 days.
   Asks (1) circuit breaker and (3) routing check still stand; with (1),
   resolve would have failed in seconds and left the tick its time budget.
+  **Recurrence 2026-11-04 18:0x-18:2xZ (FULL tick, pi4), gamma down:**
+  `core/resolve.py` (18:01Z) failed 4 gamma fetches with Errno 101 and was
+  killed at the 10-minute limit with no writes. A retry at 18:13Z failed 6
+  more (1193094, 5194672, 6490277, 2420478, 2420480, 2674154; about 2 min
+  each) and was stopped at ~18:25Z with no writes. WebFetch to
+  gamma-api.polymarket.com also failed, so the outage is not local to
+  Python; `git fetch origin` worked at 18:00Z and 18:13Z. Scan/research
+  not attempted. 9th outage in 14 days, the whole FULL tick lost again.
+  Ask (1) circuit breaker unchanged.
