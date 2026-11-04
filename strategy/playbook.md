@@ -1620,7 +1620,10 @@ Prefer, in order:
      mid). LLY also missed by 1c on 10-29. A centre near the line means ~0.5,
      and neither side was right to bet. Use the model for forecast-only rows.
      It is not an edge source unless a monthly-data build (above) moves the
-     centre off the line.
+     centre off the line. Tally (RETRO-20261104-0000): BKNG > 4.59 (+2.5%
+     over consensus), own 0.68 vs mid 0.605, print 4.66, dBrier -0.054.
+     With MA, n=2 nets -0.014, which is noise. Stays forecast-only. Re-grade
+     at n=5.
      **Conflicting consensus (RETRO-20261030-0000).** PINS > 0.49: Yahoo
      mean 0.49 vs Benzinga 0.38-0.41, own centre ~0.47, recorded 0.40 vs
      mid 0.185; resolved No, dBrier +0.126. When snapshots conflict and the
