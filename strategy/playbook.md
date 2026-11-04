@@ -10130,3 +10130,23 @@ runoffs) went +0.128 vs mid. WSV `c2ebd08676d8` 0.42 (11:00 hourly roughly
 flat vs R1) went +0.252, and a +2.3pp afternoon surge reversed it. Both
 vetoes saved $5. A record-low first round is the anomaly that mean-reverts, so
 the base rate from normal rounds does not apply.
+
+## 2026-11-04 04:0xZ: post-close turnout + closed-window absence-of-news (RETRO-20261104-0400)
+
+**Turnout-threshold post-close cap (extends the 11-02/11-03 rules, n=3
+events).** Between polls closing and the first official count, NGO
+statements that the threshold "will be cleared" and hand extrapolations of
+the last-hour increment do not license more than 0.10 from the mid. When a
+published PVT or quick-count figure exists, anchor to it, not to the NGO
+narrative. Evidence: Serbia >=70 `a1a6e000d36a` 0.78 vs 0.645 (CRTA 19h 67.8
++ an assumed +3-4pp last hour) and `6235d21e7624` 0.47 vs 0.33 (leaned on CRTA
+">70" over Ipsos/CeSID 69.7). Both lost to the mid (+0.192 and +0.112), and
+the final turnout landed in 66-70.
+
+**Closed-window absence-of-news.** For a "did X happen by D" market whose
+window has closed, going below the mid on "no report found" requires (a)
+the primary incident feed checked (piracy: UKMTO/MSCHOA/IMB; otherwise the
+official log), (b) a low per-window base rate, and (c) the window start
+read from the rules / createdAt (`mkt.py` prints it). A generic web search
+is not (a). Evidence: Somali piracy by Oct 31 `efd39a405174` 0.12 vs 0.18
+mid, resolved Yes (+0.102), base rate ~1.3 hijackings/month.

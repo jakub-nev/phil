@@ -46,6 +46,9 @@ def main(argv):
         except ValueError:
             pass
         print(f"== {m.get('id')} {m.get('question')}")
+        # createdAt/startDate open "between market creation and <date>"
+        # windows (RETRO-20261104-0400: Somali piracy row missed Aug events)
+        print(f"   created {m.get('createdAt')} start {m.get('startDate')}")
         print(f"   end {m.get('endDate')} closed={m.get('closed')} "
               f"uma={m.get('umaResolutionStatus')} liq={m.get('liquidityNum')}"
               f" vol24={m.get('volume24hr')}")
