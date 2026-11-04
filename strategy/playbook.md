@@ -10167,3 +10167,20 @@ Nov 3 midterm rows settle.
 Documented exclusion (OVV, hand table frozen; CF $5 flat via
 `counterfactual.py ledger --rows --skip-reason outside-view-veto`):
 - `cf6e208d7301` OH gov Democrats win, No-side CF @~0.17, edge +0.150, D won -> -$5.00. The veto was right. Ledger OVV line: 275 fillable, 114W/161L, +$222.00, dBrier +0.0238.
+
+## 2026-11-04 12:0xZ: Alaska concede WSV row, Yemen leg 9 (RETRO-20261104-1200)
+
+Documented exclusion (WSV, hand table frozen; CF $5 flat via
+`counterfactual.py ledger --rows --skip-reason wide-spread-veto`):
+- `7267309454b1` Alaska Senate loser concedes by Nov 3. No-side CF @0.81, edge +0.170, resolved No, so +$1.17 forgone. The veto cost a small win. Ledger WSV line: 108 fillable, 53W/55L, -$85.16, dBrier -0.0163.
+
+Candidate shape (n=1, no rule change): "the official schedule makes the
+event impossible before the deadline." Example: the deadline falls before
+polls close. Before a re-grade at n=3 can consider it as a final fact for
+the wide-book exception, both times must be read from primary sources:
+the deadline from the market's rules and the poll-close time from the
+official election authority.
+
+Yemen family n=9 (`92da49f292fc`, market-agrees, tight 0.90/0.91): 9/9
+Yes. It was not fillable at ask-edge >= 0.10, so condition (ii) of the
+n=10 pre-registration stands at 0 of 1 legs since n=8.
