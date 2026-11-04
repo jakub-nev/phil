@@ -10150,3 +10150,20 @@ official log), (b) a low per-window base rate, and (c) the window start
 read from the rules / createdAt (`mkt.py` prints it). A generic web search
 is not (a). Evidence: Somali piracy by Oct 31 `efd39a405174` 0.12 vs 0.18
 mid, resolved Yes (+0.102), base rate ~1.3 hijackings/month.
+
+## 2026-11-04 08:0xZ: deep US statewide book, poll-bias correction is priced (RETRO-20261104-0800)
+
+In a US statewide general-election book with liq >= $100k, a historical
+state poll-bias correction (e.g. "Ohio polls ran D+3 in 2020-24") is
+public, and the book has priced it. That correction alone does not
+license recording more than 0.05 from the mid. Going further needs a cited
+input the book may not have absorbed: a poll released after the book's
+last move, or an official early-vote or count figure. Evidence: Ohio gov
+2026, both rows cut the poll average for past D bias and lost to the mid.
+`1c077f763b2b` R 0.30 vs 0.225 (+0.039), `cf6e208d7301` D 0.68 vs 0.835
+(+0.075). Acton (D) won. Provisional, n=1 event; re-grade as the other
+Nov 3 midterm rows settle.
+
+Documented exclusion (OVV, hand table frozen; CF $5 flat via
+`counterfactual.py ledger --rows --skip-reason outside-view-veto`):
+- `cf6e208d7301` OH gov Democrats win, No-side CF @~0.17, edge +0.150, D won -> -$5.00. The veto was right. Ledger OVV line: 275 fillable, 114W/161L, +$222.00, dBrier +0.0238.
